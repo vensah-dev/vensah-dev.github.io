@@ -1,0 +1,60 @@
+nav{
+    margin: 0;
+    margin-bottom: 144px;
+
+}
+
+.code-text{
+    display: inline; 
+    font-family: "JetBrains Mono"; 
+    font-weight: 400; 
+    font-stretch: extra-condensed;
+}
+.text-code-color{
+    color: #D7BDFD;
+
+}
+.bracket-code-color{
+    color: var(--white100);
+}
+.string-code-color{
+    color: #EF8876;
+}
+
+.hero{
+    background-image: url("../images/about/about-hero.png");
+}
+.hero-text-about{
+    margin-bottom: 0;
+    margin-top: 32px;
+
+    width: 456px;
+}
+
+.about-section{
+    display: flex;
+
+    justify-content: space-between;
+    
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0 128px;
+
+}
+.about-header{
+    width: 496px;
+}
+.about-img{
+    height: 400px;
+    width: 512px;
+}
+
+/* delete after real pic is aquired */
+.about-img-placeholder{
+    height: 400px;
+    width: 400px;
+
+    border-radius: 15px;
+}
