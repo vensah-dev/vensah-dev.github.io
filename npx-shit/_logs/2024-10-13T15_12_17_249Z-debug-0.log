@@ -1,0 +1,24 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/Desktop/vscode/portfolio-stuff/tenplate/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm run dev
+8 verbose argv "run" "dev"
+9 verbose logfile logs-max:10 dir:/Users/mac/Desktop/vscode/portfolio-stuff/tenplate/npx-shit/_logs/2024-10-13T15_12_17_249Z-
+10 verbose logfile /Users/mac/Desktop/vscode/portfolio-stuff/tenplate/npx-shit/_logs/2024-10-13T15_12_17_249Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/npm 221ms
+13 verbose cwd /Users/mac/Desktop/vscode/portfolio-stuff/tenplate
+14 verbose os Darwin 24.0.0
+15 verbose node v20.18.0
+16 verbose npm  v10.8.2
+17 notice
+17 notice New [33mminor[39m version of npm available! [33m10.8.2[39m -> [34m10.9.0[39m
+17 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v10.9.0[39m
+17 notice To update run: [4mnpm install -g npm@10.9.0[24m
+17 notice  { force: true, [Symbol(proc-log.meta)]: true }
+18 verbose exit 0
+19 info ok

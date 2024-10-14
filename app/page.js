@@ -1,101 +1,92 @@
-import Image from "next/image";
+//react
+import React from "react";
+
+//components
+import { AboutHero } from "@/components/about-hero";
+import { AboutSection } from "@/components/about-section";
+
+//images
+import aboutProgrammer from "@/public/images/about/about-programmer.png"
+
+import aboutDeveloper from "@/public/images/about/about-developer.png"
+
+import aboutDesigner from "@/public/images/about/about-designer.png"
+import aboutPresident from "@/public/images/about/about-designer.png"
+
+
+
+//icons
+// import { FaCircleCheck } from "react-icons/fa6";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="bg-opacity-0 z-20">
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-primary from-0% to-white-opacity-0 to-40% z-101"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <AboutHero className=""/>
+
+      <div className="flex-col md:my-64 my-32 z-50">
+        {/* programmer */}
+        <AboutSection
+          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I’m an experienced programmer</h1>)}
+          details={(
+            <>
+              <p className='text-base text-white75 leading-7'>
+                C, C++, C#, Swift and Python. The 5 languages I am most familiar with. With over 6 years of experience with programming, these languages were the most useful for my interests.
+              </p>
+            </>
+          )}
+          image={aboutProgrammer}
+          position={"right"}
+        />
+        {/* developer */}
+        <AboutSection
+          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I love developing software</h1>)}
+          details={(
+            <>
+              <p className='text-base text-white75 leading-7'>
+              Over the years of my software development experience, I’ve spent my time on game dev, app dev,
+              programmed a few automations to make my life easier. As such I turn to developing my own software
+              solutions to problems I face.
+              </p>
+            </>
+          )}
+          image={aboutDeveloper}
+          position={"left"}
+        />
+        {/* designer */}
+        <AboutSection
+          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I can design</h1>)}
+          details={(
+            <>
+              <p className='text-base text-white75 leading-7'>
+              When you develop software you need someone to do the assets and UI/UX design.
+              In my case its also me. Even though I won’t say im the best designer I
+              can come up with simple minimalistic designs like this very website.
+              </p>
+            </>
+          )}
+          image={aboutDesigner}
+          position={"right"}
+        />
+        {/* president */}
+        <AboutSection
+          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I’m the president of my CCA</h1>)}
+          details={(
+            <>
+              <p className='text-base text-white75 leading-7'>
+              Being part of my Robotics Club’s excos since 2023 and volunteering to take
+              up leadership roles, I have gained ample experience with leadership. As a leader,
+              I value clear communication and always improve from constant feedback.
+              </p>
+            </>
+          )}
+          image={aboutPresident}
+          position={"left"}
+        />
+      </div>
+
+    </main>
   );
 }
