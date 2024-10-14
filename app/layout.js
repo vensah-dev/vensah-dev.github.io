@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${Ubuntu_init.variable} ${JetBrains_Mono_init.variable} antialiased scroll-smooth overflow-x-hidden`} >
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
-        <Navbar/>
+        {/* <Navbar/> */}
         <main>
           {children}
         </main>
