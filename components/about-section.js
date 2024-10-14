@@ -18,15 +18,15 @@ import { ContactGrid } from './contact-grid';
 export function AboutSection({title, details, image, position}){
   return (
     <div className="h-[75%] w-screen pb-64">
-        <div className='md:mx-16 mx-4 md:flex items-center justify-between gap-16'>
+        <div className='md:mx-16 mx-4 md:flex items-center justify-between'>
 
-            <div className={`bg-secondary flex justify-center rounded-[1rem] ${position === "left" ? "md:block hidden":"hidden"}`}>
+            <div className={`bg-secondary rounded-[1rem] md:mr-32 mr-0 ${position === "left" ? "md:block hidden":"hidden"}`}>
               <Image
                 src={image}
                 // width={auto}
                 // height={auto}
                 alt="supporting image"
-                className="object-contain w-3/4 p-4 md:p-12"
+                className="inline lg:w-full w-full p-4 md:p-12"
               />
             </div>
 
@@ -35,13 +35,13 @@ export function AboutSection({title, details, image, position}){
                 {details}
             </div>
 
-            <div className={`bg-secondary flex justify-center grow-0 rounded-[1rem] ${position === "right" ? "":"md:hidden block"}`}>
+            <div className={`bg-secondary rounded-[1rem] md:ml-32 ${position === "right" ? "":"md:hidden block"}`}>
               <Image
                 src={image}
                 // width={auto}
                 // height={auto}
                 alt="supporting image"
-                className="object-contain w-3/4 p-4 md:p-12"
+                className="inline lg:w-full w-full p-4 md:p-12"
               />
             </div>
         </div>

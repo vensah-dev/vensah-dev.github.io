@@ -1,12 +1,8 @@
 /**
  * @type {import('next').NextConfig}
  */
-
-const isProd = process.env.NODE_ENV = 'production';
-
 const nextConfig = {
-    images: { unoptimized: true },
-    output:  isProd ? 'export' : '',
+    // output: 'export',
    
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
     // trailingSlash: true,
