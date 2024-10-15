@@ -17,7 +17,7 @@ import { TextGenerateEffect } from './ui/text-generate-effect';
 
 export function AboutHero(){
   return (
-    <div className="bg-about-hero h-screen bg-cover bg-repeat-x bg-fixed animate-[bg-pan-bottom_100s_linear_infinite] md:animate-[bg-pan-bottom_20s_linear_infinite]">
+    <div className="bg-about-hero h-screen bg-contain bg-repeat-x bg-fixed animate-[bg-pan-bottom_100s_linear_infinite] md:animate-[bg-pan-bottom_20s_linear_infinite]">
         <div className="w-screen h-screen flex items-center bg-opacity-0 bg-gradient-to-t from-primary from-20% to-white-opacity-0 to-85% md:bg-gradient-to-r md:from-primary md:from-20% md:to-white-opacity-0 md:to-85% z-100">
 
             <div className='w-full z-0 mx-4 md:mx-16 md:w-2/3 '>
@@ -53,7 +53,7 @@ export function AboutHero(){
 
               <TextGenerateEffect
                 words={"Student, Developer & President"}
-                className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 lg:w-[80%]"}
+                className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 lg:w-[60%]"}
                 color={"white100"}
                 duration={1}
               />
