@@ -65,8 +65,7 @@ module.exports = {
           "100%": {transform: "left-0"},
         },
         "bg-pan-left": {
-          '0%': { backgroundPosition: '0% 50%' },
-          '100%': { backgroundPosition: '100% 50%' },
+          to : { backgroundPosition: '100% 0%' },
         },
       },
       animation: {
