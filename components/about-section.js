@@ -20,14 +20,18 @@ export function AboutSection({title, details, image, position}){
     <div className="h-[75%] w-screen pb-64">
         <div className='md:mx-16 mx-4 md:flex items-center justify-between'>
 
-            <div className={`bg-secondary rounded-[1rem] md:mr-32 mr-0 ${position === "left" ? "md:block hidden":"hidden"}`}>
-              <Image
-                src={image}
-                // width={auto}
-                // height={auto}
-                alt="supporting image"
-                className="inline lg:w-full w-full p-4 md:p-12"
-              />
+            <div className={`bg-secondary rounded-[1rem] md:mr-12 lg:mr-12 md:my-12 ${position === "left" ? "md:block hidden":"hidden"}`}>
+              <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+                <Image
+                  src={image}
+                  // width={auto}
+                  // height={auto}
+                  fill
+                  priority
+                  className='object-contain'
+                  alt="supporting image"
+                />
+              </div>
             </div>
 
             <div className='md:w-[40%] w-full py-12'>
@@ -35,14 +39,18 @@ export function AboutSection({title, details, image, position}){
                 {details}
             </div>
 
-            <div className={`bg-secondary rounded-[1rem] md:ml-32 ${position === "right" ? "":"md:hidden block"}`}>
-              <Image
-                src={image}
-                // width={auto}
-                // height={auto}
-                alt="supporting image"
-                className="inline lg:w-full w-full p-4 md:p-12"
-              />
+            <div className={`bg-secondary rounded-[1rem] md:ml-12 lg:ml-12 md:my-12 ${position === "right" ? "":"md:hidden block"}`}>
+              <div className='relative lg:w-[550px] md:w-[350px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+                <Image
+                  src={image}
+                  // width={auto}
+                  // height={auto}
+                  fill
+                  priority
+                  className='object-contain'
+                  alt="supporting image"
+                />
+              </div>
             </div>
         </div>
 

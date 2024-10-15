@@ -6,8 +6,6 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    './app/**/*.{js,ts,jsx,tsx}', // Specify the paths to your components
-
   ],
   theme: {
     screens: {
