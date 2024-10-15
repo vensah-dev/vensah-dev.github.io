@@ -5,7 +5,7 @@
 import React, { useRef } from 'react';
 
 //images
-import profilePic from "@/public/images/icons/profile-pic.svg"
+import profilePic from "@/public/icons/profile-pic.svg"
 
 //Next stuff
 import Link from "next/link";
@@ -55,12 +55,14 @@ export function Navbar(){
               <div className="flex w-full px-4 py-8 md:px-16 md:py-12 lg:justify-normal justify-between items-center absolute z-50">
 
                 <Link href={'/'}  className='z-10' onClick={() => closeSidebar()}>
+                  <div className='rounded-full overflow-hidden'>
                     <Image
                       src={profilePic}
 
                       alt="Profile Picture"
                       className="inline w-10 h-10"
                     />
+                  </div>
                 </Link>
 
 
