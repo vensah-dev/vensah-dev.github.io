@@ -61,10 +61,10 @@ module.exports = {
           "100%": {opacity: 1, filter: "blur(0px)"},
         },
         "scroll-horizontal-right": {
-          "0%": {transform: "translate-x-0"},
-          "100%": {transform: "-translate-x-full"},
+          "0%": {transform: "left-[200%]"},
+          "100%": {transform: "left-0"},
         },
-        "bg-pan-bottom": {
+        "bg-pan-left": {
           '0%': { backgroundPosition: '0% 50%' },
           '100%': { backgroundPosition: '100% 50%' },
         },
@@ -72,7 +72,7 @@ module.exports = {
       animation: {
         blurfadein: 'blur-fade-in 5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both 1',
         scrollHorizontalRight: 'scroll-horizontal-right 10s ease-in-out infinity',
-        bgPanBottom: 'bg-pan-bottom 30s linear infinite'
+        bgPanLeft: 'bg-pan-left 30s linear infinite'
       },
       backgroundImage: {
         "about-hero": "url('../public/images/about/about-hero.png')"
