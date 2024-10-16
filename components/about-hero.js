@@ -8,10 +8,10 @@ import aboutHero from "@/public/images/about/about-hero.png"
 // import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 //Next Components
-import Image from "next/image";
+// import Image from "next/image";
 
 //components
-import { PrimaryButton } from './primary-button';
+// import { PrimaryButton } from './primary-button';
 import { ContactGrid } from './contact-grid';
 import { TextGenerateEffect } from './ui/text-generate-effect';
 
