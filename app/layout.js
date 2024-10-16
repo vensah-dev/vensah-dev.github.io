@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${Ubuntu_init.variable} ${JetBrains_Mono_init.variable} antialiased scroll-smooth overflow-x-hidden`} >
       <head>
-        <link rel='icon' href='/icons/favicon.png' />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-      </head>
+        <link rel='icon' href='icons/favicon.png'/>
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"></link>
+        </head>
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
         {/* <Navbar/> */}
         <main>

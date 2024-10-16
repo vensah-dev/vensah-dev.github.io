@@ -26,7 +26,7 @@ export default function Home() {
 
       <AboutHero className=""/>
 
-      <div className="flex-col md:my-64 my-32 z-50">
+      <div className="flex-col md:mt-64 mt-32 z-50">
         {/* programmer */}
         <AboutSection
           title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I’m an experienced programmer</h1>)}
