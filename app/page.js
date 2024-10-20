@@ -24,7 +24,8 @@ import aboutDesigner from "@/public/images/about/about-designer.png"
 import aboutPresident from "@/public/images/about/about-designer.png"
 
 //icons
-// import { FaCircleCheck } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 
 //content
@@ -40,135 +41,168 @@ export default function Home() {
     {
       title: "2018",
       content: (
-        <div className="text-white90 font-medium">
-          I was 9 years old when I was introduced to the world of computer programming through a beginners book on Scratch. 
-          I made a few simple games in this year until I forgot my Scratch account&#39;s password…
-  
-          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-            <Image
-              src={aboutProgrammer}
-              fill
-              priority
-              className='object-contain'
-              alt="supporting image"
-            />
+        <>
+
+          <div className='md:w-3/4 leading-8 pb-4 px-4 md:p-8 flex-col justify-between'>
+            <p id="#titleTextMobile" className='text-2xl mb-4 text-left font-bold text-white90'></p>
+            <p>
+            I was 9 years old when I was introduced to the world of computer programming through a 
+            beginners book on Scratch. I made a few simple games in this year until I forgot my Scratch account&#39;s password…
+            </p>
+
+            <div className='md:absolute bottom-0 py-8 flex gap-8'>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowLeft className='w-6 h-6 fill-white75'/>
+              </button>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowRight className='w-6 h-6 fill-white75'/>
+              </button>
+
+            </div>
+
           </div>
-        </div>
+  
+          <div className="flex justify-center w-full self-center bg-tertiary ">
+            <div className='relative w-full' style={{aspectRatio: "1024 / 800"}}>
+              <Image
+                src={"https://images.unsplash.com/photo-1726502426504-4257be91c5c6?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                fill
+                priority
+                className=''
+                alt="supporting image"
+              />
+            </div>
+          </div>
+
+        </>
       ),
     },
     {
       title: "2020",
       content: (
-        <div className="text-white90 font-medium">
-          This was the year I did what all computer enthusiasts do - take apart their very first computer. 
-          I took apart a Dell XPS M1330 (from 2008 ☠️) and learned how computer hardware works to 
-          repaired the computer right before HBL due to COVID-19.
-          
-          <Accordion type="single" collapsible className="pt-8">
-            <AccordionItem value="item-1" className="border-2 border-white5 bg-secondary rounded-[1rem]">
-  
-              <AccordionTrigger>This enabled me to:</AccordionTrigger>
-  
-              <AccordionContent>
-                <ul className="list-disc list-inside">
-                  <li>Use my first Personal Computer for HBL after a clean install of Ubuntu 18.04 LTS</li>
-                  <li>Discover the recent technological breakthrough and innovation in quantum mechanics called the ‘Forgot My Password’ button which allowed me to recover my Scratch account to continue my programming journey</li>
-                  <li>Experience unbearably agonising pain of waiting for 7 minutes to boot up my Dell XPS M1330</li>
-                  <li>Use my painful experience to beg my parents for a new MacBook</li>
-                  <li>Use the MacBook 😊</li>
-                </ul>       
-              </AccordionContent>
-  
-            </AccordionItem>
-          </Accordion>
-  
-          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-            <Image
-              src={aboutProgrammer}
-              fill
-              priority
-              className='object-contain'
-              alt="supporting image"
-            />
+        <>
+
+          <div className='md:w-3/4 leading-8 pb-4 px-4 md:p-8 flex-col justify-between'>
+            <p id="#titleTextMobile" className='text-2xl mb-4 text-left font-bold text-white90'></p>
+            <p>
+            This was the year I did what all computer enthusiasts do - take apart their very first computer. 
+            I took apart a Dell XPS M1330 (from 2008 ☠️) and learned how computer hardware works to repaired the computer 
+            right before COVID-19. This enabled me to:
+            </p>
+
+            <div className='md:absolute bottom-0 py-8 flex gap-8'>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowLeft className='w-6 h-6 fill-white75'/>
+              </button>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowRight className='w-6 h-6 fill-white75'/>
+              </button>
+
+            </div>
+
           </div>
-        </div>
+  
+          <div className="flex justify-center w-full self-center bg-tertiary ">
+            <div className='relative w-full' style={{aspectRatio: "1024 / 800"}}>
+              <Image
+                src={"https://images.unsplash.com/photo-1486365227551-f3f90034a57c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                fill
+                priority
+                className=''
+                alt="supporting image"
+              />
+            </div>
+          </div>
+
+        </>
       ),
     },
     {
       title: "2021",
       content: (
-        <div className="text-white90 font-medium">
-          After a year of Scratch, PSLE and overcoming the reluctance to learn a syntax based language I 
-          started making games in the Unity. This required learning OOP and C# as my very first syntax based language. 
-          In 2 weeks I got a hang of Unity 3D and C# MonoBehaviour by creating an Infinite 3D Procedural Terrain Generation 
-          system using layered Perlin Noise and custom mesh generation.
+        <>
+
+          <div className='md:w-3/4 leading-8 pb-4 px-4 md:p-8 flex-col justify-between'>
+            <p id="#titleTextMobile" className='text-2xl mb-4 text-left font-bold text-white90'></p>
+            <p>
+              After a year of Scratch, PSLE and overcoming the reluctance to learn a syntax based language I
+              started making games in the Unity. This required learning OOP and C# as my very first syntax based language.
+              In 2 weeks I got a hang of Unity 3D and C# MonoBehaviour by creating an Infinite 3D Procedural Terrain Generation
+              system using layered Perlin Noise and custom mesh generation.
+            </p>
+
+            <div className='md:absolute bottom-0 py-8 flex gap-8'>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowLeft className='w-6 h-6 fill-white75'/>
+              </button>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowRight className='w-6 h-6 fill-white75'/>
+              </button>
+
+            </div>
+
+          </div>
   
-  
-          <div>
-          <Modal>
-  
-          <ModalTrigger className="flex justify-center w-full">
-            <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+          <div className="flex justify-center w-full self-center bg-tertiary ">
+            <div className='relative w-full ' style={{aspectRatio: "1024 / 800"}}>
               <Image
-                src={aboutProgrammer}
+                src={"https://images.unsplash.com/reserve/qstJZUtQ4uAjijbpLzbT_LO234824.JPG?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
                 fill
                 priority
-                className='object-contain'
+                className=''
                 alt="supporting image"
               />
             </div>
-          </ModalTrigger>
-  
-          <ModalBody rootRef={rootRef.current} className="overflow-scroll scroll-0 ">
-  
-            <ModalContent>
-              <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-                <Image
-                  src={aboutProgrammer}
-                  fill
-                  priority
-                  className='object-contain'
-                  alt="supporting image"
-                />
-              </div>
-            </ModalContent>
-  
-            <ModalFooter className="gap-4">
-              YUMMERSS...
-              As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
-          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
-          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
-          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
-            </ModalFooter>
-  
-          </ModalBody>
-  
-        </Modal>
           </div>
-        </div>
+
+        </>
       ),
     },
     {
       title: "2022",
       content: (
         <>
-          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
+
+          <div className='md:w-3/4 leading-8 pb-4 px-4 md:p-8 flex-col justify-between'>
+            <p id="#titleTextMobile" className='text-2xl mb-4 text-left font-bold text-white90'></p>
+            <p>
+            For someone who lost 11 umbrellas by forgetting where I put it (and 3 due to collateral damage), 
+            I performed just as you would expect for my sec 1 history. Other than that I also managed to: clench 
+            1st placing in 3 categories in my very first RoboCup competition.
+            </p>
+
+            <div className='md:absolute bottom-0 py-8 flex gap-8'>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowLeft className='w-6 h-6 fill-white75'/>
+              </button>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowRight className='w-6 h-6 fill-white75'/>
+              </button>
+
+            </div>
+
+          </div>
   
+          <div className="flex justify-center w-full self-center bg-tertiary ">
+            <div className='relative w-full' style={{aspectRatio: "1024 / 800"}}>
+              <Image
+                src={"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=3274&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                fill
+                priority
+                className=''
+                alt="supporting image"
+              />
+            </div>
+          </div>
+
         </>
       ),
     },
@@ -176,19 +210,42 @@ export default function Home() {
       title: "2023",
       content: (
         <>
-          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
-          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-            <Image
-              src={aboutProgrammer}
-              fill
-              priority
-              className='object-contain'
-              alt="supporting image"
-            />
+
+          <div className='md:w-3/4 leading-8 pb-4 px-4 md:p-8 flex-col justify-between'>
+            <p id="#titleTextMobile" className='text-2xl mb-4 text-left font-bold text-white90'></p>
+            <p>
+            The fact that it was streaming year and I should start to lock in for my grades took me 2 terms to realise. 
+            It was also the year that I made more achievements in my CCA by winning NRC that year and managed to contribute 
+            more to CCA by becoming an Exco. I was also part of Swift Accelerator Programme that year which enabled me to software 
+            development with Swift. Obviously I had other achievements too:
+            </p>
+
+            <div className='md:absolute bottom-0 py-8 flex gap-8'>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowLeft className='w-6 h-6 fill-white75'/>
+              </button>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowRight className='w-6 h-6 fill-white75'/>
+              </button>
+
+            </div>
+
           </div>
+  
+          <div className="flex justify-center w-full self-center bg-tertiary ">
+            <div className='relative w-full' style={{aspectRatio: "1024 / 800"}}>
+              <Image
+                src={"https://images.unsplash.com/photo-1582721570262-b6fed9bd5fe7?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                fill
+                priority
+                className=''
+                alt="supporting image"
+              />
+            </div>
+          </div>
+
         </>
       ),
     },
@@ -196,25 +253,49 @@ export default function Home() {
       title: "2024",
       content: (
         <>
-          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
-          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
-          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
-          yappist.
-          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-            <Image
-              src={aboutProgrammer}
-              // width={auto}
-              // height={auto}
-              fill
-              priority
-              className='object-contain'
-              alt="supporting image"
-            />
+
+          <div className='md:w-3/4 leading-8 pb-4 px-4 md:p-8 flex-col justify-between'>
+            <p id="#titleTextMobile" className='text-2xl mb-4 text-left font-bold text-white90'></p>
+            <p>
+            After successfully getting an subject combination with A Math, Pure Physics, Computing and combined Geography 
+            (finally no more memorising an entire textbook 🎉), I participated in the Swift Student Challenge for the second 
+            time, even though I lost again, the quality of my submission was greatly improved. This was the year I finally 
+            started web development which led em to learn:
+
+            </p>
+
+            <div className='md:absolute bottom-0 py-8 flex gap-8'>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowLeft className='w-6 h-6 fill-white75'/>
+              </button>
+
+              <button className='flex items-center justify-center w-10 h-10 rounded-full bg-white15 md:hover:opacity-75'>
+                <FaArrowRight className='w-6 h-6 fill-white75'/>
+              </button>
+
+            </div>
+
           </div>
+  
+          <div className="flex justify-center w-full self-center bg-tertiary ">
+            <div className='relative w-full' style={{aspectRatio: "1024 / 800"}}>
+              <Image
+                src={"https://images.unsplash.com/photo-1474835944939-50b3a279d8ba?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                fill
+                priority
+                className=''
+                alt="supporting image"
+              />
+            </div>
+          </div>
+
         </>
       ),
     },
   ]
+
+
   return (
     <main ref={rootRef.current} className="bg-primary z-20 pb-48 lg:pb-96">
       <div className="absolute top-0 left-0 right-0 -bottom-[1px] bg-gradient-to-t from-primary from-0% to-white-opacity-5 to-50% z-101"></div>

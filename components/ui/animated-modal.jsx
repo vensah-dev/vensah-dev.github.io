@@ -40,7 +40,7 @@ export const ModalTrigger = ({
   return (
     (<button
       className={cn(
-        "px-4 py-2 rounded-md text-white text-center relative overflow-hidden",
+        "px-4 py-2 rounded-md text-white75 text-center relative overflow-hidden",
         className
       )}
       onClick={() => setOpen(true)}>
@@ -79,13 +79,13 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="fixed inset-0 h-full w-full  flex items-center justify-center z-50">
+          className="fixed inset-0 h-full w-full flex items-center justify-center z-50">
           <Overlay />
 
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-neutral-950 border border-transparent border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-primary md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
             initial={{
@@ -136,7 +136,7 @@ export const ModalFooter = ({
 }) => {
   return (
     (<div
-      className={cn("flex justify-end p-4 bg-neutral-900", className)}>
+      className={cn("flex text-white90 font-normal leading-8 justify-end p-4 md:p-6 bg-tertiary", className)}>
       {children}
     </div>)
   );
@@ -158,7 +158,7 @@ const Overlay = ({
         opacity: 0,
         backdropFilter: "blur(0px)",
       }}
-      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}></motion.div>)
+      className={`fixed inset-0 h-full w-full bg-white5 bg-opacity-50 z-50 ${className}`}></motion.div>)
   );
 };
 
@@ -166,8 +166,8 @@ const CloseIcon = () => {
   const { setOpen } = useModal();
   return (
     (
-    <div className="flex justify-end w-ful">
-      <button onClick={() => setOpen(false)} className="l sticky top-0 p-4 group">
+    <div className="sticky top-0 p-4 flex justify-end w-ful">
+      <button onClick={() => setOpen(false)} >
         <div className="w-10 h-10 lg:w-8 lg:h-8 flex items-center justify-center rounded-full bg-white15 hover:opacity-75 transition duration-200">
           <svg
             xmlns="http://www.w3.org/2000/svg"
