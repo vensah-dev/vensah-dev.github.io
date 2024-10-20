@@ -3,7 +3,17 @@ import React from "react";
 
 //components
 import { AboutHero } from "@/components/about-hero";
+import { Timeline } from "@/components/ui/timeline";
+
 import { AboutSection } from "@/components/about-section";
+
+//Next JS stuff
+import Image from "next/image";
+
+//shadcn or Aceternity
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "@/components/ui/animated-modal";
+
 
 //images
 import aboutProgrammer from "@/public/images/about/about-programmer.png"
@@ -13,79 +23,192 @@ import aboutDeveloper from "@/public/images/about/about-developer.png"
 import aboutDesigner from "@/public/images/about/about-designer.png"
 import aboutPresident from "@/public/images/about/about-designer.png"
 
-
-
 //icons
 // import { FaCircleCheck } from "react-icons/fa6";
 
 
+//content
+
+
+//cardsData
+
 export default function Home() {
+
+  const data = [
+    {
+      title: "2018",
+      content: (
+        <div className="text-white90 font-medium">
+          I was 9 years old when I was introduced to the world of computer programming through a beginners book on Scratch. 
+          I made a few simple games in this year until I forgot my Scratch account&#39;s password…
+
+          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+            <Image
+              src={aboutProgrammer}
+              fill
+              priority
+              className='object-contain'
+              alt="supporting image"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2020",
+      content: (
+        <div className="text-white90 font-medium">
+          This was the year I did what all computer enthusiasts do - take apart their very first computer. 
+          I took apart a Dell XPS M1330 (from 2008 ☠️) and learned how computer hardware works to 
+          repaired the computer right before HBL due to COVID-19.
+          
+          <Accordion type="single" collapsible className="pt-8">
+            <AccordionItem value="item-1" className="border-2 border-white5 bg-secondary rounded-[1rem]">
+
+              <AccordionTrigger>This enabled me to:</AccordionTrigger>
+
+              <AccordionContent>
+                <ul className="list-disc list-inside">
+                  <li>Use my first Personal Computer for HBL after a clean install of Ubuntu 18.04 LTS</li>
+                  <li>Discover the recent technological breakthrough and innovation in quantum mechanics called the ‘Forgot My Password’ button which allowed me to recover my Scratch account to continue my programming journey</li>
+                  <li>Experience unbearably agonising pain of waiting for 7 minutes to boot up my Dell XPS M1330</li>
+                  <li>Use my painful experience to beg my parents for a new MacBook</li>
+                  <li>Use the MacBook 😊</li>
+                </ul>       
+              </AccordionContent>
+
+            </AccordionItem>
+          </Accordion>
+
+          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+            <Image
+              src={aboutProgrammer}
+              fill
+              priority
+              className='object-contain'
+              alt="supporting image"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2021",
+      content: (
+        <div className="text-white90 font-medium">
+          After a year of Scratch, PSLE and overcoming the reluctance to learn a syntax based language I 
+          started making games in the Unity. This required learning OOP and C# as my very first syntax based language. 
+          In 2 weeks I got a hang of Unity 3D and C# MonoBehaviour by creating an Infinite 3D Procedural Terrain Generation 
+          system using layered Perlin Noise and custom mesh generation.
+
+
+          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+            <Image
+              src={aboutProgrammer}
+              fill
+              priority
+              className='object-contain'
+              alt="supporting image"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2022",
+      content: (
+        <>
+          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+            <Image
+              src={aboutProgrammer}
+              fill
+              priority
+              className='object-contain'
+              alt="supporting image"
+            />
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "2023",
+      content: (
+        <>
+          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+            <Image
+              src={aboutProgrammer}
+              fill
+              priority
+              className='object-contain'
+              alt="supporting image"
+            />
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <>
+          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+            <Image
+              src={aboutProgrammer}
+              // width={auto}
+              // height={auto}
+              fill
+              priority
+              className='object-contain'
+              alt="supporting image"
+            />
+          </div>
+        </>
+      ),
+    },
+  ]
+
   return (
-    <main className="bg-opacity-0 z-20">
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-primary from-0% to-white-opacity-0 to-40% z-101"></div>
+    <main className="bg-primary z-20 pb-48 lg:pb-96">
+      <div className="absolute top-0 left-0 right-0 -bottom-[1px] bg-gradient-to-t from-primary from-0% to-white-opacity-5 to-50% z-101"></div>
 
       <AboutHero className=""/>
 
-      <div className="flex-col md:mt-64 mt-32 z-50">
-        {/* programmer */}
-        <AboutSection
-          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I’m an experienced programmer</h1>)}
-          details={(
-            <>
-              <p className='text-base text-white75 leading-7'>
-                C, C++, C#, Swift and Python. The 5 languages I am most familiar with. With over 6 years of experience with programming, these languages were the most useful for my interests.
-              </p>
-            </>
-          )}
-          image={aboutProgrammer}
-          position={"right"}
-        />
-        {/* developer */}
-        <AboutSection
-          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I love developing software</h1>)}
-          details={(
-            <>
-              <p className='text-base text-white75 leading-7'>
-              Over the years of my software development experience, I’ve spent my time on game dev, app dev,
-              programmed a few automations to make my life easier. As such I turn to developing my own software
-              solutions to problems I face.
-              </p>
-            </>
-          )}
-          image={aboutDeveloper}
-          position={"left"}
-        />
-        {/* designer */}
-        <AboutSection
-          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I can design</h1>)}
-          details={(
-            <>
-              <p className='text-base text-white75 leading-7'>
-              When you develop software you need someone to do the assets and UI/UX design.
-              In my case its also me. Even though I won’t say im the best designer I
-              can come up with simple minimalistic designs like this very website.
-              </p>
-            </>
-          )}
-          image={aboutDesigner}
-          position={"right"}
-        />
-        {/* president */}
-        <AboutSection
-          title={(<h1 className='text-h3 leading-[2.6rem] text-white100 pb-4 font-bold'>I’m the president of my CCA</h1>)}
-          details={(
-            <>
-              <p className='text-base text-white75 leading-7'>
-              Being part of my Robotics Club’s excos since 2023 and volunteering to take
-              up leadership roles, I have gained ample experience with leadership. As a leader,
-              I value clear communication and always improve from constant feedback.
-              </p>
-            </>
-          )}
-          image={aboutPresident}
-          position={"left"}
-        />
-      </div>
+      <Modal>
+        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+            Book your flight
+          </span>
+          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+            ✈️
+          </div>
+        </ModalTrigger>
+        <ModalBody>
+          <ModalContent>
+            Modal Content
+          </ModalContent>
+          <ModalFooter className="gap-4">
+            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
+              Cancel
+            </button>
+            <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+              Book Now
+            </button>
+          </ModalFooter>
+        </ModalBody>
+      </Modal>
+
+      <Timeline data={data}/>
 
     </main>
   );

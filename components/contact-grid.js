@@ -15,15 +15,15 @@ export function ContactGrid({about = false, footer = false}){
     <div>
         <div className={`flex gap-6 items-center ${ about === true ? 'pb-12 md:pb-16' : ''} ${ footer === true ? 'md:flex hidden' : 'flex'}`}>
             <Link href="https://github.com/vensah-dev">
-              <FaGithub className='w-8 h-8 hover:fill-white100 fill-white75 animate-blurfadein' />
+              <FaGithub className='w-8 h-8 hover:fill-white100 fill-white75 animate-blurfadein' style={{animationDelay: "2s"}} />
             </Link>
 
             <Link href="https://www.instagram.com/vensah_dev">
-              <RiInstagramFill className='w-8 h-8 hover:fill-white100 fill-white75 animate-blurfadein' />
+              <RiInstagramFill className='w-8 h-8 hover:fill-white100 fill-white75 animate-blurfadein' style={{animationDelay: "2s"}}/>
             </Link>
 
             <Link href="https://www.chess.com/member/vensah">
-              <SiChessdotcom className='w-7 h-8 hover:fill-white100 fill-white75 animate-blurfadein'/>
+              <SiChessdotcom className='w-7 h-8 hover:fill-white100 fill-white75 animate-blurfadein' style={{animationDelay: "2s"}}/>
             </Link>
         </div>
     </div>
