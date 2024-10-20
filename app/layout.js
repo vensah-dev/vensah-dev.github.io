@@ -28,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   
   return (
-    <html lang="en" className={`${Ubuntu_init.variable} ${JetBrains_Mono_init.variable} antialiased scroll-smooth overflow-x-hidden`} >
+    <html lang="en" className={`${Ubuntu_init.variable} ${JetBrains_Mono_init.variable} antialiased scroll-smooth scrollbar-thumb-black overflow-x-hidden`} >
       <head>
         <link rel='icon' href='icons/favicon.png'/>
         <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"></link>

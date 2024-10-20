@@ -45,9 +45,11 @@ export const Timeline = ({
 
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
 
-              <div className="absolute left-[32px] w-[2px] h-12 bg-white50 flex items-center justify-center backdrop-blur-xl"/>
+              <div className="absolute left-[31px] w-[4px] h-12 bg-white75 flex items-center justify-center">
+                <div className="h-8 w-1 rounded-full bg-opacity-0 bg-tertiary p-1 " />
+              </div>
 
-              <div className="h-12 flex-col self-center items-center">
+              <div className="flex justify-center items-center">
                 <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white90 ">
                   {item.title}
                 </h3>
@@ -88,3 +90,4 @@ export const Timeline = ({
     </div>)
   );
 };
+

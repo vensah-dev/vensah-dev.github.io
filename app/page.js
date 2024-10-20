@@ -1,6 +1,6 @@
-//react
-import React from "react";
-
+'use client';
+//React
+import React, { useRef } from 'react';
 //components
 import { AboutHero } from "@/components/about-hero";
 import { Timeline } from "@/components/ui/timeline";
@@ -32,8 +32,10 @@ import aboutPresident from "@/public/images/about/about-designer.png"
 
 //cardsData
 
-export default function Home() {
 
+
+export default function Home() {
+  const rootRef = useRef(null);
   const data = [
     {
       title: "2018",
@@ -41,7 +43,7 @@ export default function Home() {
         <div className="text-white90 font-medium">
           I was 9 years old when I was introduced to the world of computer programming through a beginners book on Scratch. 
           I made a few simple games in this year until I forgot my Scratch account&#39;s password…
-
+  
           <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
             <Image
               src={aboutProgrammer}
@@ -64,9 +66,9 @@ export default function Home() {
           
           <Accordion type="single" collapsible className="pt-8">
             <AccordionItem value="item-1" className="border-2 border-white5 bg-secondary rounded-[1rem]">
-
+  
               <AccordionTrigger>This enabled me to:</AccordionTrigger>
-
+  
               <AccordionContent>
                 <ul className="list-disc list-inside">
                   <li>Use my first Personal Computer for HBL after a clean install of Ubuntu 18.04 LTS</li>
@@ -76,10 +78,10 @@ export default function Home() {
                   <li>Use the MacBook 😊</li>
                 </ul>       
               </AccordionContent>
-
+  
             </AccordionItem>
           </Accordion>
-
+  
           <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
             <Image
               src={aboutProgrammer}
@@ -100,16 +102,60 @@ export default function Home() {
           started making games in the Unity. This required learning OOP and C# as my very first syntax based language. 
           In 2 weeks I got a hang of Unity 3D and C# MonoBehaviour by creating an Infinite 3D Procedural Terrain Generation 
           system using layered Perlin Noise and custom mesh generation.
-
-
-          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-            <Image
-              src={aboutProgrammer}
-              fill
-              priority
-              className='object-contain'
-              alt="supporting image"
-            />
+  
+  
+          <div>
+          <Modal>
+  
+          <ModalTrigger className="flex justify-center w-full">
+            <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+              <Image
+                src={aboutProgrammer}
+                fill
+                priority
+                className='object-contain'
+                alt="supporting image"
+              />
+            </div>
+          </ModalTrigger>
+  
+          <ModalBody rootRef={rootRef.current} className="overflow-scroll scroll-0 ">
+  
+            <ModalContent>
+              <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
+                <Image
+                  src={aboutProgrammer}
+                  fill
+                  priority
+                  className='object-contain'
+                  alt="supporting image"
+                />
+              </div>
+            </ModalContent>
+  
+            <ModalFooter className="gap-4">
+              YUMMERSS...
+              As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+          As a yapper i am a professional yapper. i can get any point across with my professional yapping skills and make it last as long as humanly possible.
+          but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
+          i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
+          yappist.
+            </ModalFooter>
+  
+          </ModalBody>
+  
+        </Modal>
           </div>
         </div>
       ),
@@ -122,15 +168,7 @@ export default function Home() {
           but since this is just a brief description i would be cutting my yapperness short for the sake of me not being able to use lorem ipsum. speaking of which
           i have come to realise that i could have just written lorem ipsum and hit tab on visual studio code just to fill it with lorem ipsum. i am a professional
           yappist.
-          <div className='relative lg:w-[550px] p-4 w-full md:m-12' style={{aspectRatio: "1024 / 800"}}>
-            <Image
-              src={aboutProgrammer}
-              fill
-              priority
-              className='object-contain'
-              alt="supporting image"
-            />
-          </div>
+  
         </>
       ),
     },
@@ -177,36 +215,11 @@ export default function Home() {
       ),
     },
   ]
-
   return (
-    <main className="bg-primary z-20 pb-48 lg:pb-96">
+    <main ref={rootRef.current} className="bg-primary z-20 pb-48 lg:pb-96">
       <div className="absolute top-0 left-0 right-0 -bottom-[1px] bg-gradient-to-t from-primary from-0% to-white-opacity-5 to-50% z-101"></div>
 
       <AboutHero className=""/>
-
-      <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-            Book your flight
-          </span>
-          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            ✈️
-          </div>
-        </ModalTrigger>
-        <ModalBody>
-          <ModalContent>
-            Modal Content
-          </ModalContent>
-          <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
-            </button>
-            <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-              Book Now
-            </button>
-          </ModalFooter>
-        </ModalBody>
-      </Modal>
 
       <Timeline data={data}/>
 
