@@ -9,9 +9,24 @@ import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 
-export function CardCarouselContent({text, image}) {
+export function CardCarouselContent({text, image, position}) {
     return(
         <>
+
+        <div className={`flex justify-center w-full self-center ${position === "left" ? "block":"md:hidden"}`}>
+          <div className='relative w-full' style={{aspectRatio: "120 / 100"}}>
+            <Image
+              src={image}
+              fill
+              priority
+              className='object-cover relative z-0'
+              alt="supporting image"
+            />
+          </div>
+
+        </div>
+
+
 
         <div className='lg:w-3/4 leading-8 p-4 lg:p-8 flex-col justify-between h-full'>
           <p className='lg:pb-[88px]'>{text}</p>
@@ -29,8 +44,9 @@ export function CardCarouselContent({text, image}) {
           </div>
         
         </div>
-        
-        <div className="flex justify-center w-full self-center bg-tertiary ">
+
+
+        <div className={`flex justify-center w-full self-center bg-tertiary ${position === "right" ? "md:block hidden":"hidden"}`}>
           <div className='relative w-full' style={{aspectRatio: "120 / 100"}}>
             <Image
               src={image}
