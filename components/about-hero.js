@@ -63,8 +63,7 @@ export function AboutHero(){
                 words={"I’m Venkatesh Devendran. A student in Pei Hwa Secondary School, a passionate developer and the president of my Robotics Club"}
                 className={" w-full md:w-3/5 lg:w-1/3 pb-4 animate-blurfadein"}
                 color={"white75"}
-                duration={0}
-                filter={false}
+                duration={1}
                 staggerVal={0.05}
               />
 

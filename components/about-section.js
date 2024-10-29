@@ -17,7 +17,7 @@ import { ContactGrid } from './contact-grid';
 
 export function AboutSection({title, details, image, position}){
   return (
-    <div className="h-[75%] w-screen pb-64">
+    <div className="h-[75%] w-screen py-64">
         <div className='md:mx-16 mx-4 md:flex items-center justify-between'>
 
             <div className={`bg-secondary rounded-[1rem] md:mr-12 lg:mr-12 md:my-12 ${position === "left" ? "md:block hidden":"hidden"}`}>
