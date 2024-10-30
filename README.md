@@ -4,6 +4,9 @@
 
 This website is still under development.
 
+## Landing page
+When and if the site gets big enough there will be a landing page with the latest years about and latest or best projects and some competencies on display. Will only make this page if the website is large enough or if it feels necessary.
+
 ## About Page
 This will be the landing page for now and the aim is to let vistors get a crash course on who am I and my skills and programming journey through a scrollable timeline and some image cards and possibly some of my projects
 
