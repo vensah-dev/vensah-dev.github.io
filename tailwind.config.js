@@ -20,7 +20,7 @@ module.exports = {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
   			accent: '#679877',
-        accentSecondary: '#C5CC66',
+        	accentSecondary: '#C5CC66',
   			accentGradient: 'linear-gradient(90deg, #679877 0%, #BDBD75 100%)',
   			primary: '#070907',
   			secondary: '#161816',
@@ -93,7 +93,7 @@ module.exports = {
   			}
   		},
   		animation: {
-  			blurfadein: 'blur-fade-in 5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both 1',
+  			blurfadein: 'blur-fade-in 2.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both 1',
   			scrollHorizontalRight: 'scroll-horizontal-right 10s ease-in-out infinity',
   			bgPanLeft: 'bg-pan-left 30s linear infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
