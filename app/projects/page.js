@@ -86,7 +86,7 @@ export default function Projects(){
                 <div className='flex justify-between'>
                     {
                         projects.map((project, index) => (
-                            <ProjectThumbnail path={project.path} title={project.title} image={project.image} tags={project.tags} index={index}/>
+                            <ProjectThumbnail key={index} path={project.path} title={project.title} image={project.image} tags={project.tags} index={index}/>
                         ))
                     }
                 </div>
