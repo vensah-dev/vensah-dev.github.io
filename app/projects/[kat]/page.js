@@ -11,6 +11,8 @@
 //     };
 // }
 
+'use client'
+
 export const generateStaticParams = async () => {
     const projects = [
         {
