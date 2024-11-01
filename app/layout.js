@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"></link>
         </head>
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
-        {/* <Navbar/> */}
+        <Navbar/>
         <main>
           {children}
         </main>

@@ -49,11 +49,31 @@ export function Navbar(){
     
   }
 
+  const navItems = [
+    {
+      title: "About",
+      url: "/",
+    },
+    {
+      title: "Projects",
+      url: "/projects",
+    },
+    // {
+    //   title: "Competencies",
+    //   url: "/competencies",
+    // },
+    // {
+    //   title: "Achievements",
+    //   url: "/achievements",
+    // },
+  ]
+
   return (
         <header>
           <nav>
               <div className="flex w-full px-4 py-8 md:px-16 md:py-12 lg:justify-normal justify-between items-center absolute z-50">
 
+                {/* profile picture */}
                 <Link href={'/'}  className='z-10' onClick={() => closeSidebar()}>
                   <div className='rounded-full overflow-hidden'>
                     <Image
@@ -80,42 +100,30 @@ export function Navbar(){
                     <IoClose className='w-8 h-8 fill-white90'/>
                   </div>
 
-                  <Link href={'/'}  onClick={() => closeSidebar()}>
-                    <p className={` hover:text-accent py-4 text-center ${pathname === '/' ? "text-accent" : "text-white75"}`}>About</p>
-                  </Link>
 
-                  <Link href={'/competencies'} onClick={() => closeSidebar()}>
-                    <p className={` hover:text-accent py-4 text-center ${pathname === '/competencies' ? "text-accent" : "text-white75"}`}>Competencies</p>
-                  </Link>
+                  {
+                    navItems.map((navItem, index) => (
+                      <Link href={navItem.url} key={index} onClick={() => closeSidebar()}>
+                        <p className={` hover:text-accent py-4 text-center ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
+                      </Link>
+                    ))
+                  }
 
-                  <Link href={'/projects'} onClick={() => closeSidebar()}>
-                    <p className={` hover:text-accent py-4 text-center ${pathname === '/projects' ? "text-accent" : "text-white75"}`}>Projects</p>
-                  </Link>
-                    
-                  <Link href={'/achievements'} onClick={() => closeSidebar()}>
-                    <p className={` hover:text-accent py-4 text-center ${pathname === '/achievements' ? "text-accent" : "text-white75"}`}>Achievements</p>
-                  </Link>
                 </ul>
 
 
 
                 {/* large navbar */}
                 <ul className='lg:block hidden'>
-                  <Link href={'/'} >
-                    <p className={`text-base hover:text-accent inline py-12 pl-16 ${pathname === '/' ? "text-accent" : "text-white75"}`}>About</p>
-                  </Link>
 
-                  <Link href={'/competencies'} >
-                    <p className={`text-base hover:text-accent inline py-12 pl-16 ${pathname === '/competencies' ? "text-accent" : "text-white75"}`}>Competencies</p>
-                  </Link>
+                  {
+                    navItems.map((navItem, index) => (
+                      <Link href={navItem.url} key={index} >
+                        <p className={`text-base hover:text-accent inline py-12 pl-16 ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
+                      </Link>
+                    ))
+                  }
 
-                  <Link href={'/projects'} >
-                    <p className={`text-base hover:text-accent inline py-12 pl-16 ${pathname === '/projects' ? "text-accent" : "text-white75"}`}>Projects</p>
-                  </Link>
-
-                  <Link href={'/achievements'} >
-                    <p className={`text-base hover:text-accent inline py-12 pl-16 ${pathname === '/achievements' ? "text-accent" : "text-white75"}`}>Achievements</p>
-                  </Link>
                 </ul>
 
               </div>
