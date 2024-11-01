@@ -60,7 +60,7 @@ export const Timeline = ({
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full ">
 
-              <div className="text-white75 font-medium lg:flex flex-grow-0 bg-secondary rounded-[1.5rem] align-text-top overflow-hidden">
+              <div className="text-white75 font-medium lg:flex flex-grow-0 bg-secondary rounded-[1rem] align-text-top overflow-hidden">
                 <p className="md:hidden block text-2xl mb-4 text-left font-bold text-white90 pt-4 px-4 rounded-t-[1.5rem] ">{item.title}</p>
 
                 {item.content}

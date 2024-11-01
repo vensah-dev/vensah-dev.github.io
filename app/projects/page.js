@@ -21,7 +21,8 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation'
 
 //components
-import { PrimaryButton } from '@/components/primary-button';
+import { SecondaryButton } from '@/components/secondary-button'
+
 import FeaturedProject from '@/components/featured-project';
 import ProjectThumbnail from '@/components/project-thumbnail';
 
@@ -87,6 +88,8 @@ export default function Projects(){
                     }
                 </div>
             </div>
+
+            <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-10 pb-32' handleClick={() => router.push('/projects/all')}/>
 
         </>
     )

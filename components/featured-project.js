@@ -44,6 +44,8 @@ export default function FeaturedProject({featuredProjectBanner, featuredProjectL
                             <Image
                                 src={featuredProjectLogo}
                                 fill
+                                placeholder="blur"
+                                quality={100}
                                 className='object-contain'
                                 alt='featured project logo'
                             />
