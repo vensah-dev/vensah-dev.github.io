@@ -31,7 +31,7 @@ export default function FeaturedProject({featuredProjectBanner, featuredProjectL
                     <Image
                         src={featuredProjectBanner}
                         fill
-                        className='object-contain'
+                        className='object-cover'
                         alt='featured project banner'
                     />
                 </div>
@@ -40,12 +40,11 @@ export default function FeaturedProject({featuredProjectBanner, featuredProjectL
                 <div className='w-[50vw] bg-primary bg-opacity-50 absolute top-0 flex items-center p-16' style={{aspectRatio: "864 / 731"}}>
 
                     <div className='flex-col'>
-                        <div className='relative w-[30vw] mb-10' style={{aspectRatio: "3 / 1"}}>
+                        <div className='relative w-[30vw] mb-10' style={{aspectRatio: "600 / 200"}}>
                             <Image
                                 src={featuredProjectLogo}
                                 fill
                                 placeholder="blur"
-                                quality={100}
                                 className='object-contain'
                                 alt='featured project logo'
                             />
