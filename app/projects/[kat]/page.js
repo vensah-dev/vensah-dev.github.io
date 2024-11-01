@@ -11,7 +11,6 @@
 //     };
 // }
 
-'use client'
 
 export const generateStaticParams = async () => {
     const projects = [
@@ -63,7 +62,7 @@ export const generateStaticParams = async () => {
     ];
    
     return projects.map((project) => ({
-      slug: project.slug,
+      kat: project.slug,
     }))
 };
 
