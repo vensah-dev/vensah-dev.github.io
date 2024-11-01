@@ -28,7 +28,7 @@ import ProjectThumbnail from '@/components/project-thumbnail';
 
 export default function Projects(){
     const router = useRouter()
-    
+
     const projects = [
         {
             title: "Ecopedia",
@@ -39,6 +39,7 @@ export default function Projects(){
                 },
             ],
             path: "/projects/ecopedia",
+            slug: "ecopedia",
             image: "/images/projects/ecopedia/thumbnail.png",
         },
 
@@ -51,6 +52,7 @@ export default function Projects(){
                 },
             ],
             path: "/projects/plantanator",
+            slug: "plantanator",
             image: "/images/projects/plantanator/thumbnail.png",
 
         },
@@ -69,10 +71,11 @@ export default function Projects(){
                 },
             ],
             path: "/projects/smart-sheet",
+            slug: "smart-sheet",
             image: "/images/projects/smart-sheet/thumbnail.png",
 
         },
-    ]
+    ];
 
     return(
         <>
@@ -83,7 +86,7 @@ export default function Projects(){
                 <div className='flex justify-between'>
                     {
                         projects.map((project, index) => (
-                            <ProjectThumbnail key={index} path={project.path} title={project.title} image={project.image} tags={project.tags}/>
+                            <ProjectThumbnail path={project.path} title={project.title} image={project.image} tags={project.tags} index={index}/>
                         ))
                     }
                 </div>
