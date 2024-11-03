@@ -25,7 +25,7 @@ export default function ProjectsDetailPage({ params }) {
             {/* full poster */}
             <div>
                 <div className='w-screen h-[136px]' style={{backgroundColor: project.navbarColor || "#070907"}}/>
-                <div className='relative w-screen h-[calc(100vh-136px)] -z-50' style={{aspectRatio: "1728 / 800", backgroundColor: project.navbarColor || "#070907"}}>
+                <div className='relative w-screen h-[calc(100vh-136px)] -z-50 bg-primary' style={{aspectRatio: "1728 / 800", backgroundColor: project.navbarColor || "#070907"}}>
                 
                     <Image
                         src={project.fullPoster}
@@ -55,7 +55,7 @@ export default function ProjectsDetailPage({ params }) {
 
             {/* highlights */}
             <div className={`mx-32 mt-32 mb-64 ${project.highlights && project.highlights.length > 0 ? '':'hidden'}`}>
-                <h1 className='text-h1 text-white90 font-bold pb-10'>Highlights</h1>
+                <h1 className='text-h1 text-white100 font-bold pb-10'>Highlights</h1>
 
                 <div className="relative w-full border-white10 border-2 rounded-[1rem]">
                     <div className="font-medium lg:flex flex-grow-0 bg-opacity-0 rounded-[1rem] align-text-top overflow-hidden">
