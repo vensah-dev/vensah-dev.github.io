@@ -62,9 +62,9 @@ export default function ProjectsDetailPage({ params }) {
             <div>
                 {
                     project.links && project.links.length > 0 ?(
-                        project.links.map((link)=>(
+                        project.links.map((link, index)=>(
 
-                            <a href={link.url}>{link.name}</a>
+                            <a href={link.url} key={index}>{link.name}</a>
 
                         ))
                     ):null
