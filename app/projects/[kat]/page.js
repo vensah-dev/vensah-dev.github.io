@@ -21,28 +21,44 @@ export default function ProjectsDetailPage({ params }) {
 
     return (
         <>
+
             {/* full poster */}
             <div>
-                <div className='w-screen h-[136px]' style={{backgroundColor: project.navbarColor === null ? "#070907" : project.navbarColor}}/>
-                <div className='relative w-screen -z-50' style={{aspectRatio: "1728 / 800"}}>
+                <div className='w-screen h-[136px]' style={{backgroundColor: project.navbarColor || "#070907"}}/>
+                <div className='relative w-screen h-[calc(100vh-136px)] -z-50' style={{aspectRatio: "1728 / 800", backgroundColor: project.navbarColor || "#070907"}}>
                 
                     <Image
                         src={project.fullPoster}
                         fill
                         quality={100}
-                        className='object-crop opacity-100'
+                        className='object-scale-down object-top'
                         alt='project-image'
                     />
                 </div>
-                <div className='w-screen h-[15vw]' style={{ background: `linear-gradient(to bottom, ${project.navbarColor === null ? "#070907" : project.navbarColor}, ${"#070907"})` }}/>
+                {/* <div className='w-screen h-[15vw]' style={{ background: `linear-gradient(to bottom, ${project.navbarColor === null ? "#070907" : project.navbarColor}, ${"#070907"})` }}/> */}
+            </div>
+
+            {/* links */}
+            <div className='flex-col items-center justify-center py-16 bg-secondary'>
+                <div className='flex justify-center gap-16'>
+                    {
+
+                        project.links && project.links.length > 0 ?(
+                            project.links.map((link, index)=>(
+                                <a href={link.url} key={index} className='block text-accent w-16 h-16'>{link.content}</a>
+                            ))
+                        ):null
+                        
+                    }
+                </div>
             </div>
 
             {/* highlights */}
-            <div className={`mx-32 my-32 ${project.highlights && project.highlights.length > 0 ? '':'hidden'}`}>
-                <h1 className='text-h1 text-white100 font-bold pb-10'>Highlights</h1>
+            <div className={`mx-32 mt-32 mb-64 ${project.highlights && project.highlights.length > 0 ? '':'hidden'}`}>
+                <h1 className='text-h1 text-white90 font-bold pb-10'>Highlights</h1>
 
                 <div className="relative w-full border-white10 border-2 rounded-[1rem]">
-                    <div className="text-white75 font-medium lg:flex flex-grow-0 bg-opacity-0 rounded-[1rem] align-text-top overflow-hidden">
+                    <div className="font-medium lg:flex flex-grow-0 bg-opacity-0 rounded-[1rem] align-text-top overflow-hidden">
 
                         {
                             project.highlights && project.highlights.length > 0 ? (
@@ -56,19 +72,6 @@ export default function ProjectsDetailPage({ params }) {
                     </div>
                 </div>
 
-            </div>
-            
-            {/* links */}
-            <div>
-                {
-                    project.links && project.links.length > 0 ?(
-                        project.links.map((link, index)=>(
-
-                            <a href={link.url} key={index}>{link.name}</a>
-
-                        ))
-                    ):null
-                }
             </div>
 
         </>

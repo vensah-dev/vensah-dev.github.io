@@ -28,12 +28,12 @@ export default function ProjectThumbnail({path, image, title, tags}){
                 </div>
 
                 <div className='flex-col px-2 py-4'>
-                    <p className='text-h6 text-white75 font-normal pb-4'>{title}</p>
+                    <p className='text-h6 group-hover:text-white75 text-white100 font-normal pb-4'>{title}</p>
 
                     <div className='flex gap-4'>
                         {
                             tags.map((tag, index) => (
-                                <p key={index} className='bg-transparent bg-opacity-50 rounded-full inline-flex text-base text-white75 font-light px-4' style={{backgroundColor: tag.color}}>{tag.title}</p>
+                                <p key={index} className='bg-transparent bg-opacity-50 rounded-full inline-flex text-base group-hover:brightness-75 text-white75 font-light px-4' style={{backgroundColor: tag.color}}>{tag.title}</p>
                             ))
                         }
                     </div>

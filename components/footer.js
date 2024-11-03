@@ -19,7 +19,7 @@ const Footer = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   return (
-    <footer className='bg-secondary'>
+    <footer className='bg-secondary '>
         <div className="flex mx-16 py-6 items-center justify-between">
 
           <button onClick={scrollToTop}>

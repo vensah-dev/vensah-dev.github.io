@@ -31,7 +31,7 @@ module.exports = {
   			white50: 'hsla(240, 2%, 88%, 0.5)',
   			white25: 'hsla(240, 2%, 88%, 0.25)',
   			white15: 'hsla(240, 2%, 88%, 0.15)',
-        white10: 'hsla(240, 2%, 88%, 0.10)',
+        	white10: 'hsla(240, 2%, 88%, 0.10)',
   			white5: 'hsla(240, 2%, 88%, 0.05)'
   		},
   		fontFamily: {

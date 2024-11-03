@@ -14,17 +14,17 @@ export function ContactGrid({about = false, footer = false}){
   return (
     <div>
         <div className={`flex gap-6 items-center ${ about === true ? 'pb-12 md:pb-16' : ''} ${ footer === true ? 'md:flex hidden' : 'flex'}`}>
-            <Link href="https://github.com/vensah-dev">
+            <a href="https://github.com/vensah-dev">
               <FaGithub className={`w-8 h-8 hover:fill-white100 fill-white75 ${about === true ? 'animate-blurfadein' : ''}`} style={{animationDelay: "1s"}} />
-            </Link>
+            </a>
 
-            <Link href="https://www.instagram.com/vensah_dev">
+            <a href="https://www.instagram.com/vensah_dev">
               <RiInstagramFill className={`w-8 h-8 hover:fill-white100 fill-white75 ${about === true ? 'animate-blurfadein' : ''}`} style={{animationDelay: "1.3s"}}/>
-            </Link>
+            </a>
 
-            <Link href="https://www.chess.com/member/vensah">
+            <a href="https://www.chess.com/member/vensah">
               <SiChessdotcom className={`w-7 h-8 hover:fill-white100 fill-white75 ${about === true ? 'animate-blurfadein' : ''}`} style={{animationDelay: "1.6s"}}/>
-            </Link>
+            </a>
         </div>
     </div>
   )
