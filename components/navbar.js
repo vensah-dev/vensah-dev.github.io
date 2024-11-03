@@ -18,7 +18,7 @@ import { IoClose } from "react-icons/io5";
 
 
 
-export function Navbar(){
+export function Navbar({className, style}){
   const pathname = usePathname()
   
   const sidebarRef = useRef(null);
@@ -70,7 +70,7 @@ export function Navbar(){
 
   return (
         <header>
-          <nav>
+          <nav className={className} style={style}>
               <div className="flex w-full px-4 py-8 md:px-16 md:py-12 lg:justify-normal justify-between items-center absolute z-50">
 
                 {/* profile picture */}

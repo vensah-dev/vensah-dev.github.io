@@ -20,7 +20,7 @@ import { useRouter } from 'next/navigation'
 import { PrimaryButton } from '@/components/primary-button';
 
 
-export default function FeaturedProject({featuredProjectBanner, featuredProjectLogo}){
+export default function FeaturedProject({banner, logo, description}){
     const router = useRouter()
 
     return(
@@ -29,8 +29,9 @@ export default function FeaturedProject({featuredProjectBanner, featuredProjectL
                 {/* featured project image */}
                 <div className='absolute top-0 w-screen -z-50' style={{aspectRatio: "1728 / 731"}}>
                     <Image
-                        src={featuredProjectBanner}
+                        src={banner}
                         fill
+                        quality={100}
                         className='object-contain'
                         alt='featured project banner'
                     />
@@ -42,20 +43,14 @@ export default function FeaturedProject({featuredProjectBanner, featuredProjectL
                     <div className='flex-col'>
                         <div className='relative w-[30vw] mb-10' style={{aspectRatio: "3 / 1"}}>
                             <Image
-                                src={featuredProjectLogo}
+                                src={logo}
                                 fill
-                                placeholder="blur"
                                 quality={100}
                                 className='object-contain'
                                 alt='featured project logo'
                             />
                         </div>
-                        <p className='text-base text-white75 font-light w-4/5'>
-                            Attentia is a mobile app designed to improve the attention span of teenagers.
-                            It gamifies the habit of doing recommended mind and physical exercises.
-                            Users earn credits by completing these exercises, which can be used to unlock
-                            rewards like leaderboards and profile pictures.
-                        </p>
+                        <p className='text-base text-white75 font-light w-4/5'>{description}</p>
                         <PrimaryButton text={"View"} className='pt-10' handleClick={() => router.push('/projects/attentia')}/>
                     </div>
 

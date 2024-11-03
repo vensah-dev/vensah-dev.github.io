@@ -9,7 +9,7 @@ import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 
-export function CardCarouselContent({content, position}) {
+export function CardCarouselContent({content, position = false}) {
   const [index, setIndex] = useState(0);
 
   const showButtons = content.length > 1 ? true : false;
@@ -27,13 +27,12 @@ export function CardCarouselContent({content, position}) {
             alt="supporting image"
           />
         </div>
-
       </div>
 
 
 
-      <div className='lg:w-3/4 leading-8 p-4 lg:p-8 flex-col justify-between h-full' >
-        <p className='lg:pb-[88px]' dangerouslySetInnerHTML={{ __html: content[index].text }}></p>
+      <div className={`lg:w-3/4 leading-8 p-4 lg:p-8 flex-col justify-between h-full ${position === "full" ? 'hidden':''}`} >
+        <h1 className={`lg:pb-[88px]`} dangerouslySetInnerHTML={{ __html: content[index].text }}></h1>
       
         <div className='lg:absolute lg:bottom-0 flex gap-8 my-8'>
       
@@ -60,6 +59,31 @@ export function CardCarouselContent({content, position}) {
             alt="supporting image"
           />
         </div>
+      </div>
+
+      <div className={`flex justify-center w-full self-center bg-tertiary ${position === "full" ? '' : 'hidden'}`}>
+        <div className='relative w-full' style={{aspectRatio: "16 / 8"}}>
+          <Image
+            src={content[index].image}
+            fill
+            priority
+            className='object-cover'
+            alt="supporting image"
+          />
+        </div>
+
+        <div className={`lg:absolute lg:bottom-0 flex gap-8 m-8`}>
+      
+          <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === 0 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index > 0){setIndex(index-1)} }}>
+            <FaArrowLeft className='w-6 h-6 fill-white75'/>
+          </button>
+      
+          <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === content.length-1 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index < content.length-1){setIndex(index+1)} }}>
+            <FaArrowRight className='w-6 h-6 fill-white75'/>
+          </button>
+      
+        </div>
+
       </div>
       
       </>

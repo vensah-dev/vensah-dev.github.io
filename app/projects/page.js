@@ -4,13 +4,6 @@
 import React from 'react'
 
 //images
-// import ScratchLogo from "@/public/images/about/scratch-logo.png"
-import FeaturedProjectBanner from "@/public/images/projects/attentia/banner.png"
-import FeaturedProjectLogo from "@/public/images/projects/attentia/logo.png"
-
-import ecopedia from "/public/images/projects/ecopedia/thumbnail.png"
-
-
 
 //icons
 
@@ -26,67 +19,24 @@ import { SecondaryButton } from '@/components/secondary-button'
 import FeaturedProject from '@/components/featured-project';
 import ProjectThumbnail from '@/components/project-thumbnail';
 
+//Data
+import { projects } from '../../lib/projects';
+
 export default function Projects(){
     const router = useRouter()
 
-    const projects = [
-        {
-            title: "Ecopedia",
-            tags: [
-                {
-                    title: "Competition",
-                    color: "rgba(197, 204, 102, 0.5)",
-                },
-            ],
-            path: "/projects/ecopedia",
-            slug: "ecopedia",
-            image: "/images/projects/ecopedia/thumbnail.png",
-        },
-
-        {
-            title: "Plantanator",
-            tags: [
-                {
-                    title: "Competition",
-                    color: "rgba(197, 204, 102, 0.5)",
-                },
-            ],
-            path: "/projects/plantanator",
-            slug: "plantanator",
-            image: "/images/projects/plantanator/thumbnail.png",
-
-        },
-
-        {
-            title: "Smart Sheet",
-            tags: [
-                {
-                    title: "SAP",
-                    color: "rgba(103, 152, 119, 0.5)",
-                },
-
-                {
-                    title: "Passion Project",
-                    color: "rgba(216, 178, 255, 0.5)",
-                },
-            ],
-            path: "/projects/smart-sheet",
-            slug: "smart-sheet",
-            image: "/images/projects/smart-sheet/thumbnail.png",
-
-        },
-    ];
+    const landingPageProjects = projects.slice(1, 4);
 
     return(
         <>
-            <FeaturedProject featuredProjectBanner={FeaturedProjectBanner} featuredProjectLogo={FeaturedProjectLogo}/>
+            <FeaturedProject banner={projects[0].banner} logo={projects[0].logo} description={projects[0].description}/>
 
             <div className='flex-col m-16'>
                 <p className='text-h3 text-white100 font-medium mb-4'>Projects</p>
                 <div className='flex justify-between'>
                     {
-                        projects.map((project, index) => (
-                            <ProjectThumbnail key={index} path={project.path} title={project.title} image={project.image} tags={project.tags} index={index}/>
+                        landingPageProjects.map((project, index) => (
+                            <ProjectThumbnail key={index} path={`/projects/${project.kat}`} title={project.title} image={project.image} tags={project.tags} index={index}/>
                         ))
                     }
                 </div>
