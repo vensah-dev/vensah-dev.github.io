@@ -42,7 +42,7 @@ export default function Projects(){
                 </div>
             </div>
 
-            <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-10 pb-32' handleClick={() => router.push('/projects/all')}/>
+            {/* <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-10 pb-32' handleClick={() => router.push('/projects/all')}/> */}
 
         </>
     )
