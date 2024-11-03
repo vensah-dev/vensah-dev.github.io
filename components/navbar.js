@@ -93,7 +93,7 @@ export function Navbar({className, style}){
 
 
                 {/* sidebar */}
-                <ul ref={sidebarRef} id="sidebar" className=' flex-col items-center justify-center transition-all delay-100	 duration-300 ease-[cubic-bezier(0.680,-0.150,0.265,1.150)] z-0 lg:hidden fixed w-full left-[100%] top-0 bottom-0 bg-white5 backdrop-blur-2xl text-h5'>
+                <ul ref={sidebarRef} id="sidebar" className=' flex-col items-center justify-center transition-all delay-100	 duration-300 z-0 lg:hidden fixed w-full left-[100%] top-0 bottom-0 bg-white5 backdrop-blur-2xl text-h5'>
 
                   {/* close */}
                   <div ref={menuCloseRef} className='lg:hidden flex w-full px-4 py-8 md:px-16 md:py-12 justify-end items-center z-0 self-end transition-all duration-300' onClick={() => closeSidebar()}>
