@@ -32,7 +32,7 @@ export default function ProjectsDetailPage({ params }) {
                         fill
                         quality={100}
                         className='object-scale-down object-top'
-                        alt='project-image'
+                        alt={project.title + "-full-poster"}
                     />
                 </div>
                 {/* <div className='w-screen h-[15vw]' style={{ background: `linear-gradient(to bottom, ${project.navbarColor === null ? "#070907" : project.navbarColor}, ${"#070907"})` }}/> */}

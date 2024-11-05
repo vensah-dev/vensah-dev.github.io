@@ -79,7 +79,7 @@ export function Navbar({className, style}){
                     <Image
                       src={profilePic}
 
-                      alt="Profile Picture"
+                      alt="vensah-profile-picture"
                       className="inline w-10 h-10"
                     />
                   </div>

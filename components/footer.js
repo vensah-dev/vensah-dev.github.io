@@ -28,7 +28,7 @@ const Footer = () => {
                 <div className='rounded-full w-8 h-8 overflow-hidden'>
                   <Image
                     src={profilePic}
-                    alt="Profile Picture"  
+                    alt="vensah-profile-picture"  
                   />
                 </div>
 

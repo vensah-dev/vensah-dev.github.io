@@ -8,8 +8,6 @@ import { CardCarouselContent } from '@/components/ui/card-carousel-content';
 import { AboutHero } from "@/components/about-hero";
 import { Timeline } from "@/components/ui/timeline";
 
-import { AboutSection } from "@/components/about-section";
-
 //Next JS stuff
 import Image from "next/image";
 

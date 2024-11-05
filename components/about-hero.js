@@ -53,8 +53,8 @@ export function AboutHero(){
               </div>
 
               <TextGenerateEffect
-                words={"Student, Developer & President"}
-                className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 lg:w-[60%]"}
+                words="Student, Developer & President"
+                className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 w-full lg:w-[75%] xl:w-[55%]"}
                 color={"white100"}
                 duration={1}
               />

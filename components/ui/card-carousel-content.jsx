@@ -24,25 +24,37 @@ export function CardCarouselContent({content, position = false}) {
             fill
             priority
             className='object-cover relative z-0'
-            alt="supporting image"
+            alt="supporting-image"
           />
         </div>
       </div>
 
 
 
-      <div className={`lg:w-3/4 leading-8 p-4 lg:p-8 flex-col justify-between h-full ${position === "full" ? 'hidden':''}`} >
-        <h1 className={`lg:pb-[88px]`} dangerouslySetInnerHTML={{ __html: content[index].text }}></h1>
+      <div className={`lg:w-3/4 leading-8 p-4 lg:p-8 flex-col justify-between h-full ${position === "full" ? 'hidden':''}`} style={{aspectRatio: `${showButtons === true ? '120' : '100'} / 100`}} >
       
-        <div className='lg:absolute lg:bottom-0 flex gap-8 my-8'>
+        <h1 className="h-full overflow-scroll relative">
+          {/* <div className="gradient-overlay  z-50"></div> */}
+          {content[index].text}
+          <div className='absolute bottom-0 left-0 right-0 h-10'>
+            <div className="fixed gradient-overlay bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+
+        </h1>
+        <div className='absolute top-0 h-[10%] bg-gradient-to-b bg-transparent from-white to-secondary'></div>
+
       
-          <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === 0 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index > 0){setIndex(index-1)} }}>
-            <FaArrowLeft className='w-6 h-6 fill-white75'/>
-          </button>
-      
-          <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === content.length-1 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index < content.length-1){setIndex(index+1)} }}>
-            <FaArrowRight className='w-6 h-6 fill-white75'/>
-          </button>
+        <div className='lg:absolute lg:bottom-0'>
+
+          <div className='flex gap-8 my-8'>
+                <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === 0 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index > 0){setIndex(index-1)} }}>
+                  <FaArrowLeft className='w-6 h-6 fill-white75'/>
+                </button>
+            
+                <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === content.length-1 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index < content.length-1){setIndex(index+1)} }}>
+                  <FaArrowRight className='w-6 h-6 fill-white75'/>
+                </button>
+          </div>
       
         </div>
       

@@ -20,38 +20,51 @@ import { useRouter } from 'next/navigation'
 import { PrimaryButton } from '@/components/primary-button';
 
 
-export default function FeaturedProject({banner, logo, description}){
+export default function FeaturedProject({project}){
     const router = useRouter()
 
     return(
-            <div className=' w-screen' style={{aspectRatio: "1728 / 731"}}>
+            <div className=' w-screen'>
 
                 {/* featured project image */}
-                <div className='absolute top-0 w-screen -z-50' style={{aspectRatio: "1728 / 731"}}>
+                <div className={` h-[136px] w-full lg:hidden`} style={{backgroundColor: project.navbarColor}}/>
+                <div className={`lg:absolute relative top-0 w-screen lg:h-auto h-[35vh] -z-50 lg:aspect-[1728/731] aspect-auto`} style={{aspectRatio: ""}}>
                     <Image
-                        src={banner}
+                        src={project.banner+".png"}
                         fill
                         quality={100}
-                        className='object-contain'
-                        alt='featured project banner'
+                        className='object-cover hidden lg:block'
+                        alt={project.title + "-banner"}
+                    />
+
+                    <Image
+                        src={project.banner+"-mobile.png"}
+                        fill
+                        quality={100}
+                        className='object-cover lg:hidden block'
+                        alt={project.title + "-banner"}
                     />
                 </div>
 
                 {/* featured project description */}
-                <div className='w-[50vw] bg-primary bg-opacity-50 absolute top-0 flex items-center p-16' style={{aspectRatio: "864 / 731"}}>
+                <div className='lg:w-[50vw] w-full lg:bg-primary lg:bg-opacity-50 bg-secondary backdrop-blur-[999px] top-0 flex xl:items-center md:px-16 px-4 xl:pt-0 lg:pt-[136px] lg:aspect-[864/731] aspect-auto lg:pb-0 py-8'>
 
                     <div className='flex-col'>
-                        <div className='relative w-[30vw] mb-10' style={{aspectRatio: "3 / 1"}}>
-                            <Image
-                                src={logo}
-                                fill
-                                quality={100}
-                                className='object-contain'
-                                alt='featured project logo'
-                            />
+
+                        <div className='lg:flex-col md:flex flex-col xl:gap-10 gap-4'>
+                            <div className='lg:block relative lg:w-[30vw] md:w-[60vw] w-[80vw]' style={{aspectRatio: "3 / 1"}}>
+                                <Image
+                                    src={project.logo}
+                                    fill
+                                    quality={100}
+                                    className='object-contain'
+                                    alt={project.title + "-logo"}
+                                />
+                            </div>
+                            <p className='text-base text-white75 font-light w-full'>{project.description}</p>
                         </div>
-                        <p className='text-base text-white75 font-light w-4/5'>{description}</p>
-                        <PrimaryButton text={"View"} className='pt-10' handleClick={() => router.push('/projects/attentia')}/>
+
+                        <PrimaryButton text={"View"} className='xl:pt-10 pt-6' handleClick={() => router.push('/projects/attentia')}/>
                     </div>
 
                 </div>

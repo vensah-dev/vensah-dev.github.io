@@ -16,7 +16,7 @@ export default function ProjectThumbnail({path, image, title, tags}){
     const router = useRouter()
 
     return(
-        <Link href={path} className='group w-[30%]' onClick={()=>{console.log(image)}}>
+        <Link href={path} className='md:group md:w-[30%] w-full' onClick={()=>{console.log(image)}}>
             <div className='flex-col bg-secondary rounded-[1rem] overflow-clip p-2 group-active:brightness-125 transition-all duration-350'>
                 <div className='opacity-90 relative w-[(100vw-128px)/3] rounded-[0.5rem] overflow-clip group-hover:opacity-70 group-active:brightness-75 transition-all duration-350' style={{aspectRatio: "540 / 300"}}>
                     <Image

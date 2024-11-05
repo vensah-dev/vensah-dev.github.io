@@ -29,11 +29,11 @@ export default function Projects(){
 
     return(
         <>
-            <FeaturedProject banner={projects[0].banner} logo={projects[0].logo} description={projects[0].description}/>
+            <FeaturedProject project={projects[0]}/>
 
-            <div className='flex-col m-16'>
+            <div className='flex-col my-16 md:mx-16 mx-4'>
                 <p className='text-h3 text-white100 font-medium mb-4'>Projects</p>
-                <div className='flex justify-between'>
+                <div className='flex md:flex-row flex-col md:justify-between gap-10'>
                     {
                         landingPageProjects.map((project, index) => (
                             <ProjectThumbnail key={index} path={`/projects/${project.kat}`} title={project.title} image={project.image} tags={project.tags} index={index}/>
