@@ -39,9 +39,10 @@ export default function ProjectsDetailPage({ params }) {
                 {/* <div className='w-screen h-[15vw]' style={{ background: `linear-gradient(to bottom, ${project.navbarColor === null ? "#070907" : project.navbarColor}, ${"#070907"})` }}/> */}
             </div>
 
-            {/* links */}
-            <div className='flex-col items-center justify-center lg:py-12 py-6 bg-secondary'>
-                <div className='flex justify-center lg:gap-16 gap-10'>
+            {/* description */}
+            <div className='flex lg:flex-row flex-col lg:justify-between items-center lg:gap-0 gap-10 lg:py-12 py-6 bg-secondary lg:px-32 md:px-16 px-4'>
+                <h1 className='text-white75 lg:w-[50%] w-full text-h6'>{project.description}</h1>
+                <div className='flex lg:justify-self-start justify-center lg:gap-16 gap-10'>
                     {
 
                         project.links && project.links.length > 0 ?(
