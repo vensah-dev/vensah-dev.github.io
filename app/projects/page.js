@@ -33,7 +33,7 @@ export default function Projects(){
 
             <div className='flex-col my-16 md:mx-16 mx-4'>
                 <p className='text-h3 text-white100 font-medium mb-4'>Projects</p>
-                <div className='flex md:flex-row flex-col md:justify-between gap-10'>
+                <div className='flex lg:flex-row flex-col md:justify-between gap-10'>
                     {
                         landingPageProjects.map((project, index) => (
                             <ProjectThumbnail key={index} path={`/projects/${project.kat}`} title={project.title} image={project.image} tags={project.tags} index={index}/>

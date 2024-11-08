@@ -47,7 +47,7 @@ export const Timeline = ({
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm xl:w-full">
 
               <div className="absolute left-[32px] w-[2px] h-10 bg-white75 flex items-center justify-center">
-                <div className="h-8 w-1 rounded-full bg-opacity-0 bg-tertiary p-1 " />
+                <div className="h-8 w-1 bg-opacity-0 bg-tertiary p-1 " />
               </div>
 
               <div className="flex justify-center items-center">

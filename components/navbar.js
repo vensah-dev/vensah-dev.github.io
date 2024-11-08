@@ -114,12 +114,12 @@ export function Navbar({className, style}){
 
 
                 {/* large navbar */}
-                <ul className='lg:block hidden'>
+                <ul className='lg:flex hidden pl-8'>
 
                   {
                     navItems.map((navItem, index) => (
                       <Link href={navItem.url} key={index} >
-                        <p className={`text-base hover:text-accent inline py-12 pl-16 ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
+                        <p className={`text-base hover:text-accent inline py-12 px-8 ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
                       </Link>
                     ))
                   }

@@ -216,13 +216,16 @@ export default function Home() {
 
 
   return (
-    <main ref={rootRef.current} className="bg-primary z-20 pb-[25%] ">
-      <div className="absolute top-0 left-0 right-0 -bottom-[1px] bg-gradient-to-t from-primary from-0% to-white-opacity-5 to-50% z-101"></div>
+    <>
+      <main ref={rootRef.current} className="bg-primary z-20 lg:pb-[25%] md:pb-[35%] pb-[40%]">
 
-      <AboutHero className=""/>
+        <div className="absolute top-0 left-0 right-0 -bottom-[1px] bg-gradient-to-t from-primary from-0% to-white-opacity-5 to-50% z-101"></div>
 
-      <Timeline data={data}/>
+        <AboutHero className=""/>
 
-    </main>
+        <Timeline data={data}/>
+         
+      </main>
+    </>
   );
 }

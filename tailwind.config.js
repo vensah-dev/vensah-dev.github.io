@@ -23,7 +23,7 @@ module.exports = {
         	accentSecondary: '#C5CC66',
   			accentGradient: 'linear-gradient(90deg, #679877 0%, #BDBD75 100%)',
   			primary: '#070907',
-  			secondary: '#161816',
+  			secondary: '#181b18',
   			tertiary: '#222622',
   			white100: 'hsla(240, 2%, 88%, 1.0)',
   			white90: 'hsla(240, 2%, 88%, 0.9)',
