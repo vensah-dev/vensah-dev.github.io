@@ -36,8 +36,8 @@ export default function Projects(){
                 <div className='flex lg:flex-row flex-col md:justify-between gap-8'>
                     {
                         landingPageProjects.map((project, index) => (
-                            <div className='lg:w-[(100vw-128)/3] w-full'>
-                                <ProjectThumbnail key={index} project={project}/>
+                            <div key={index} className='lg:w-[(100vw-128)/3] w-full'>
+                                <ProjectThumbnail project={project}/>
                             </div>
                         ))
                     }
