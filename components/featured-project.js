@@ -61,7 +61,7 @@ export default function FeaturedProject({project}){
                                     alt={project.title + "-logo"}
                                 />
                             </div>
-                            <p className='text-base text-white75 font-light w-full'>{project.description}</p>
+                            <p className='xl:text-base lg:text-sm text-base text-white75 font-light w-full'>{project.description}</p>
                         </div>
 
                         <PrimaryButton text={"View"} className='xl:pt-10 pt-6' handleClick={() => router.push('/projects/attentia')}/>

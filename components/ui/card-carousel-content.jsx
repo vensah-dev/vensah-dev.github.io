@@ -33,9 +33,9 @@ export function CardCarouselContent({content, position}) {
 
 
       <div className='lg:w-3/4 leading-8 p-4 lg:p-8 flex-col justify-between h-full' >
-        <p className='lg:pb-[88px] h-48 overflow-scroll pb-4' dangerouslySetInnerHTML={{ __html: content[index].text }}></p>
+        <p className='lg:pb-[88px] xl:h-48 h-48 overflow-scroll pb-4' dangerouslySetInnerHTML={{ __html: content[index].text }}></p>
       
-        <div className='lg:absolute lg:bottom-0 flex gap-8 lg:my-8 my-4'>
+        <div className='lg:absolute lg:bottom-0 flex gap-8 xl:my-8 my-4'>
       
           <button className={`flex items-center justify-center w-10 h-10 rounded-full bg-white15  ${index === 0 ? 'opacity-50' : 'md:hover:opacity-75'} ${showButtons === true ? 'flex' : 'hidden'}`} onClick={() => { if(index > 0){setIndex(index-1)} }}>
             <FaArrowLeft className='w-6 h-6 fill-white75'/>

@@ -36,13 +36,15 @@ export default function Projects(){
                 <div className='flex lg:flex-row flex-col md:justify-between gap-10'>
                     {
                         landingPageProjects.map((project, index) => (
-                            <ProjectThumbnail key={index} path={`/projects/${project.kat}`} title={project.title} image={project.image} tags={project.tags} index={index}/>
+                            <div className='lg:w-[(100vw-128)/3] w-full'>
+                                <ProjectThumbnail key={index} project={project}/>
+                            </div>
                         ))
                     }
                 </div>
             </div>
 
-            {/* <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-10 pb-32' handleClick={() => router.push('/projects/all')}/> */}
+            <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-8 pb-32' handleClick={() => router.push('/projects/all')}/>
 
         </>
     )
