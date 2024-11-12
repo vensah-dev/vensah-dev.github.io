@@ -33,8 +33,8 @@ export default function ProjectThumbnail({project}){
 
                     <div className='flex overflow-scroll w-[100%] no-scrollbar gap-2'>
                         {
-                            project.tags.map((tag)=>(
-                                <div className={`px-3 py-1 rounded-full bg-opacity-50`} style={{backgroundColor: tag.color}}>
+                            project.tags.map((tag, index)=>(
+                                <div key={index} className={`px-3 py-1 rounded-full bg-opacity-50`} style={{backgroundColor: tag.color}}>
                                     <p className='whitespace-nowrap'>{tag.title}</p>
                                 </div>
                             ))

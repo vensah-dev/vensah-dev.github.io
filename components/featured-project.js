@@ -67,8 +67,8 @@ export default function FeaturedProject({project}){
 
                         <div className='flex overflow-scroll w-full no-scrollbar gap-2'>
                             {
-                                project.tags.map((tag)=>(
-                                    <div className={`px-4 py-1 rounded-full bg-opacity-50`} style={{backgroundColor: tag.color}}>
+                                project.tags.map((tag, index)=>(
+                                    <div key={index} className={`px-4 py-1 rounded-full bg-opacity-50`} style={{backgroundColor: tag.color}}>
                                         <p className='whitespace-nowrap'>{tag.title}</p>
                                     </div>
                                 ))
