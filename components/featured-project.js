@@ -61,7 +61,18 @@ export default function FeaturedProject({project}){
                                     alt={project.title + "-logo"}
                                 />
                             </div>
-                            <p className='xl:text-base lg:text-sm text-base text-white75 font-light w-full'>{project.description}</p>
+                            <p className='xl:text-base lg:text-sm text-base text-white75 font-light w-full pb-4'>{project.description}</p>
+
+                        </div>
+
+                        <div className='flex overflow-scroll w-full no-scrollbar gap-2'>
+                            {
+                                project.tags.map((tag)=>(
+                                    <div className={`px-4 py-1 rounded-full bg-opacity-50`} style={{backgroundColor: tag.color}}>
+                                        <p className='whitespace-nowrap'>{tag.title}</p>
+                                    </div>
+                                ))
+                            }
                         </div>
 
                         <PrimaryButton text={"View"} className='xl:pt-10 pt-6' handleClick={() => router.push('/projects/attentia')}/>
