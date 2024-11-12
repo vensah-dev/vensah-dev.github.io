@@ -38,9 +38,9 @@ export function AllProjects({}){
   }
 
   return (
-    <div className="flex-col mx-16">
+    <div className="flex-col md:mx-16 mx-4">
 
-      <p className='text-h2 text-white100 font-bold mb-4'>All Projects</p>
+      <p className='md:text-h2 text-h3 text-white100 font-bold mb-4'>All Projects</p>
 
       <div className='flex flex-row items-center mb-16 bg-secondary rounded-full overflow-clip'>
 
@@ -62,7 +62,7 @@ export function AllProjects({}){
         
       </div>
 
-      <div className='grid grid-cols-4 gap-8'>
+      <div className='grid lg:grid-cols-4 grid-cols-1 gap-8'>
         {
             filteredProjects.map((project, index) => (
                 <ProjectThumbnail key={index} project={project}/>
