@@ -10,10 +10,14 @@ import { ProjectsDetailView } from '@/components/project-detail-view';
 
 export const generateStaticParams = async () => {
 
-    listOfPages = projects + [{kat: "all"}]
+    var listOfKittens = ["all"]
+
+    for(item in projects){
+        listOfKittens.push(item.kat)
+    }
    
-    return listOfPages.map((p) => ({
-      kat: p.kat
+    return listOfKittens.map((k) => ({
+      kat: k
     }))
 };
 
