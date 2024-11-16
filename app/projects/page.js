@@ -32,7 +32,7 @@ export default function Projects(){
             <FeaturedProject project={projects[0]}/>
 
             <div className='flex-col my-16 md:mx-16 mx-4'>
-                <p className='text-h3 text-white100 font-medium mb-4'>Projects</p>
+                <p className='text-h3 text-white100 font-medium md:mb-8 mb-4'>Projects</p>
                 <div className='flex lg:flex-row flex-col md:justify-between gap-8'>
                     {
                         landingPageProjects.map((project, index) => (
@@ -44,7 +44,7 @@ export default function Projects(){
                 </div>
             </div>
 
-            {/* <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-8 pb-32' handleClick={() => router.push('/projects/all')}/> */}
+            <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-8 pb-32' handleClick={() => router.push('/projects/all')}/>
 
         </>
     )

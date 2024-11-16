@@ -75,7 +75,7 @@ export default function FeaturedProject({project}){
                             }
                         </div>
 
-                        <PrimaryButton text={"View"} className='xl:pt-10 pt-6' handleClick={() => router.push('/projects/attentia')}/>
+                        <PrimaryButton text={"View"} className='pt-10' handleClick={() => router.push('/projects/attentia')}/>
                     </div>
 
                 </div>
