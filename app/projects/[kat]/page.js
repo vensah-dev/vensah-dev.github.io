@@ -7,17 +7,11 @@ import { projects } from '../../../lib/projects';
 import { AllProjects } from '@/components/all-projects';
 import { ProjectsDetailView } from '@/components/project-detail-view';
 
-const paths = [
-
-    { params: { kat: 'all' } },
-
-    ...projects.map((project) => ({ params: { kat: project.kat } }))
-]
 
 export const generateStaticParams = async () => {
-    
-    return paths.map((path) => ({
-        kat: path.kat,
+   
+    return projects.map((p) => ({
+      kat: p.kat
     }))
 };
 
