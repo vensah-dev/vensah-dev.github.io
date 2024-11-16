@@ -47,7 +47,7 @@ export function ProjectsDetailView({project}){
     {/* full poster */}
     <div className='md:px-0 px-4'>
         <div className='w-screen md:h-[136px] h-[104px]' style={{backgroundColor: project.navbarColor || "#070907"}}/>
-        <div className='relative w-screen lg:h-[calc(100vh-136px)] -z-50 bg-primary md:aspect-[1728/800] aspect-[600/200]' style={{backgroundColor: project.navbarColor || "#070907"}}>
+        <div className='relative w-full lg:h-[calc(100vh-136px)] -z-50 bg-primary md:aspect-[1728/800] aspect-[600/200]' style={{backgroundColor: project.navbarColor || "#070907"}}>
         
             <Image
                 src={lessThanMd ? project.logo : project.fullPoster}
@@ -63,8 +63,8 @@ export function ProjectsDetailView({project}){
 
     {/* description */}
     <div className='flex lg:flex-row flex-col lg:justify-between items-center lg:gap-0 gap-10 lg:py-12 py-6 bg-secondary lg:px-32 md:px-16 px-4'>
-        <h1 className='text-white75 lg:w-[50%] w-full text-h6'>{project.description}</h1>
-        <div className='flex lg:justify-self-start justify-center lg:gap-16 gap-10'>
+        <h1 className='text-white75 lg:w-[50%] w-full text-h6 md:pb-10'>{project.description}</h1>
+        <div className='flex w-full justify-self-start justify-start lg:gap-16 gap-10'>
             {
 
                 project.links && project.links.length > 0 ?(
