@@ -23,6 +23,7 @@ import Trophyx3 from "@/public/images/about/trophyx3.png"
 import BlankWhite from "@/public/images/about/blank-white.png"
 import SmartSheet from "@/public/images/about/smart-sheet.png"
 import WebDevelop from "@/public/images/about/web-develop.png"
+import President from "@/public/images/about/president.png"
 import LostUmbrellaGraph from "@/public/images/about/Umbrellas-lost.png"
 import ForgotPassword from "@/public/images/about/Forgot-Password.png"
 import OldWebsite from "@/public/images/about/old-website.png"
@@ -117,9 +118,11 @@ export default function Home() {
   ]
   const year2024 = [
     {
-      text: `After successfully getting a subject combination with A Math, Pure Physics, Computing and Combined Geography (finally no more memorising an entire textbook for History 🎉), I participated in the Swift Student Challenge for the second time, even though I lost again, the quality of my submission was greatly improved. `,
+      text: `After successfully getting a subject combination with A Math, Pure Physics, 
+      Computing and Combined Geography (finally no more memorising an entire textbook for History 🎉), 
+      I had been appointed as the President of my CCA.`,
 
-      image: WebDevelop,
+      image: President,
     },
     {
       text: `This year I finally started on web development, the first website I created was an older version of this very portfolio website. 
