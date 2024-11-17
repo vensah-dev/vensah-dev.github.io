@@ -25,7 +25,7 @@ import { projects } from '../../lib/projects';
 export default function Projects(){
     const router = useRouter()
 
-    const landingPageProjects = projects.slice(1, 4);
+    const landingPageProjects = projects.slice(1, 5);
 
     return(
         <>
@@ -33,7 +33,15 @@ export default function Projects(){
 
             <div className='flex-col my-16 md:mx-16 mx-4'>
                 <p className='text-h3 text-white100 font-medium md:mb-8 mb-4'>Projects</p>
-                <div className='flex lg:flex-row flex-col md:justify-between gap-8'>
+                
+                <div className='grid lg:grid-cols-4 grid-cols-1 gap-8'>
+                    {
+                        landingPageProjects.map((project, index) => (
+                            <ProjectThumbnail key={index} project={project}/>
+                        ))
+                    }
+                </div>
+                {/* <div className='flex lg:flex-row flex-col md:justify-between gap-8'>
                     {
                         landingPageProjects.map((project, index) => (
                             <div key={index} className='lg:w-[(100vw-128)/3] w-full'>
@@ -41,7 +49,7 @@ export default function Projects(){
                             </div>
                         ))
                     }
-                </div>
+                </div> */}
             </div>
 
             {/* <SecondaryButton text={"View All"} className='flex w-full items-center justify-center pt-8 pb-32' handleClick={() => router.push('/projects/all')}/> */}

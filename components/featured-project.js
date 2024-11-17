@@ -3,14 +3,6 @@
 //React
 import React from 'react'
 
-//images
-// import ScratchLogo from "@/public/images/about/scratch-logo.png"
-// import FeaturedProjectBanner from "@/public/images/projects/attentia/banner.png"
-// import FeaturedProjectLogo from "@/public/images/projects/attentia/logo.png"
-
-
-//icons
-
 //Next Stuff
 import Image from "next/image";
 

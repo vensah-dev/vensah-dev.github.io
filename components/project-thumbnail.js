@@ -23,7 +23,7 @@ export default function ProjectThumbnail({project}){
                         src={project.image}
                         fill
                         className='object-cover'
-                        alt='featured project logo'
+                        alt={String(project.title) + ' Thumbnail'}
                     />
                 </div>
 

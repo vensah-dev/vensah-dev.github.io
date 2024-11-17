@@ -31,7 +31,7 @@ export function FullCardCarousel({content}) {
                         />
                     </div>
 
-                    <div className={`absolute bottom-0 flex md:gap-8 gap-6 md:m-4 m-2 bg-primary p-[3px] backdrop-blur-3xl rounded-full opacity-80 ${showButtons === true ? 'flex' : 'hidden'}`}>
+                    <div className={`absolute bottom-0 flex md:gap-8 gap-6 md:m-4 m-2 bg-primary p-[3px] backdrop-blur-3xl rounded-full opacity-70 ${showButtons === true ? 'flex' : 'hidden'}`}>
                 
                         <button className={`flex items-center justify-center w-8 h-8 rounded-full bg-white15 backdrop-blur-3xl ${index === 0 ? 'opacity-50' : 'md:hover:opacity-75'}`} onClick={() => { if(index > 0){setIndex(index-1)} }}>
                             <FaArrowLeft className='w-6 h-6 fill-white75'/>

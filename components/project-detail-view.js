@@ -45,7 +45,7 @@ export function ProjectsDetailView({project}){
   return (
     <>
     {/* full poster */}
-    <div className='md:px-0 px-4'>
+    <div className='' >
         <div className='w-screen md:h-[136px] h-[104px]' style={{backgroundColor: project.navbarColor || "#070907"}}/>
         <div className='relative w-full lg:h-[calc(100vh-136px)] -z-50 bg-primary md:aspect-[1728/800] aspect-[600/200]' style={{backgroundColor: project.navbarColor || "#070907"}}>
         
@@ -53,7 +53,7 @@ export function ProjectsDetailView({project}){
                 src={lessThanMd ? project.logo : project.fullPoster}
                 fill
                 // quality={100}
-                className='object-scale-down object-top'
+                className='md:px-0 px-4 object-scale-down object-top'
                 alt={ lessThanMd ? project.title + "-logo" : project.title + "-full-poster"}
             />
         </div>
@@ -62,14 +62,14 @@ export function ProjectsDetailView({project}){
     </div>
 
     {/* description */}
-    <div className='flex lg:flex-row flex-col lg:justify-between items-center lg:gap-0 gap-10 lg:py-12 py-6 bg-secondary lg:px-32 md:px-16 px-4'>
-        <h1 className='text-white75 lg:w-[50%] w-full text-h6 md:pb-10'>{project.description}</h1>
-        <div className='flex w-full justify-self-start justify-start lg:gap-16 gap-10'>
+    <div className='flex lg:flex-row flex-col lg:justify-between items-center lg:gap-0 gap-12 lg:py-12 py-6 bg-secondary lg:px-32 md:px-16 px-4'>
+        <h1 className='text-white75 lg:w-[50%] w-full text-h6 '>{project.description}</h1>
+        <div className='flex w-full lg:justify-self-start lg:justify-end justify-start lg:gap-10 gap-8'>
             {
 
                 project.links && project.links.length > 0 ?(
                     project.links.map((link, index)=>(
-                        <a href={link.url} key={index} className='block text-accent md:w-16 md:h-16 w-10 h-10'>{link.content}</a>
+                        <a href={link.url} key={index} className='block text-accent lg:w-16 lg:h-16 w-10 h-10'>{link.content}</a>
                     ))
                 ):null
                 
