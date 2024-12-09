@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -12,9 +12,11 @@ export const Timeline = ({
   // Add window resize event listener
   useEffect(() => {
     const handleResize = () => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        setHeight(rect.height);
+      if (typeof window !== 'undefined') {
+        if (ref.current) {
+          const rect = ref.current.getBoundingClientRect();
+          setHeight(rect.height);
+        }
       }
     };
 
