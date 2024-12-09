@@ -226,7 +226,7 @@ export default function Home() {
 
         <AboutHero className="" />
 
-        <Timeline data={data} />
+        {/* <Timeline data={data} /> */}
 
       </main>
     </>
