@@ -46,7 +46,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
   const rootRef = useRef(null);
-  
+
   const year2018 = [
     {
       text: `I was 9 years old when I was introduced to the world of computer programming through a beginners 
@@ -106,7 +106,7 @@ export default function Home() {
     },
     {
       text: `I also made more achievements in my CCA by winning NRC and managed to contribute more to my CCA by becoming an Exco. 
-      My NRC project also gave me the opportunity to give a presentattion about it during the STEM ALP Fest 2023.`,
+      My NRC project also gave me the opportunity to give a presentation about it during the STEM ALP Fest 2023.`,
 
       image: StemAlpFest,
     },
@@ -127,7 +127,7 @@ export default function Home() {
     {
       text: `This year I finally started on web development, the first website I created was an older version of this very portfolio website. 
       Along the way, I learnt some UI/UX design skills which enabled me to redesign the webiste until it looked and felt like this. 
-      Hosting this on GitHub, naturally forced me to <p style="font-style: italic; display: inline; padding-right: 2px;">properly</p> learn hwo to use Git and GitHub, which also hosts my website.`,
+      Hosting this on GitHub, naturally forced me to <p style="font-style: italic; display: inline; padding-right: 2px;">properly</p> learn how to use Git and GitHub, which also hosts my website.`,
 
       image: OldWebsite,
     },
@@ -153,18 +153,18 @@ export default function Home() {
     {
       title: "2018",
       content: (
-        <CardCarouselContent 
+        <CardCarouselContent
           position={"right"}
           content={year2018}
         />
       ),
     },
-    
+
 
     {
       title: "2020",
       content: (
-        <CardCarouselContent 
+        <CardCarouselContent
           position={"left"}
           content={year2020}
         />
@@ -175,7 +175,7 @@ export default function Home() {
     {
       title: "2021",
       content: (
-        <CardCarouselContent 
+        <CardCarouselContent
           position={"right"}
           content={year2021}
         />
@@ -186,7 +186,7 @@ export default function Home() {
     {
       title: "2022",
       content: (
-        <CardCarouselContent 
+        <CardCarouselContent
           position={"left"}
           content={year2022}
         />
@@ -197,7 +197,7 @@ export default function Home() {
     {
       title: "2023",
       content: (
-        <CardCarouselContent 
+        <CardCarouselContent
           position={"right"}
           content={year2023}
         />
@@ -208,13 +208,13 @@ export default function Home() {
     {
       title: "2024",
       content: (
-        <CardCarouselContent 
+        <CardCarouselContent
           position={"left"}
           content={year2024}
         />
       ),
     },
-    
+
   ]
 
 
@@ -224,10 +224,10 @@ export default function Home() {
 
         <div className="absolute top-0 left-0 right-0 -bottom-[1px] bg-gradient-to-t from-primary from-0% to-white-opacity-5 to-50% z-101"></div>
 
-        <AboutHero className=""/>
+        <AboutHero className="" />
 
-        <Timeline data={data}/>
-         
+        <Timeline data={data} />
+
       </main>
     </>
   );
