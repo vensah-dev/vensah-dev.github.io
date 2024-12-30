@@ -46,7 +46,7 @@ export function ProjectsDetailView({ project }) {
         <>
             {/* full poster */}
             <div className='' >
-                <div className='w-screen md:h-[136px] h-[104px]' style={{ backgroundColor: project.navbarColor || "#070907" }} />
+                <div className='w-screen md:h-[136px] h-[104px]' style={{ background: `linear-gradient(180deg, rgba(7, 9, 7, 0.5) 0%, rgba(7, 9, 7, 0.0) 100%), ${project.navbarColor}` }} />
                 <div className='relative w-full lg:h-[calc(100vh-136px)] -z-50 bg-primary md:aspect-[1728/800] aspect-[600/200]' style={{ backgroundColor: project.navbarColor || "#070907" }}>
 
                     <Image
@@ -108,3 +108,4 @@ export function ProjectsDetailView({ project }) {
         </>
     )
 }
+
