@@ -22,7 +22,7 @@ const JetBrains_Mono_init = JetBrains_Mono({
 export const metadata = {
   title: "Venkatesh",
   description: "Portfolio Website",
-  content: "VensahDev or Venkatesh's portfolio website."
+  content: "VensahDev or Venkatesh's portfolio website. Search Terms: Vensah Dev Vensah-Dev Venkatesh Devendran Attentia Smart Sheet Plantantor 8000"
 };
 
 
