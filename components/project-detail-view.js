@@ -44,6 +44,7 @@ export function ProjectsDetailView({ project }) {
 
     return (
         <>
+            <meta name={project.name} description={project.description} content={`${project.slug, project.description}`} />
             {/* full poster */}
             <div className='' >
                 <div className='w-screen md:h-[136px] h-[104px]' style={{ background: `linear-gradient(180deg, rgba(7, 9, 7, 0.5) 0%, rgba(7, 9, 7, 0.0) 100%), ${project.navbarColor}` }} />
