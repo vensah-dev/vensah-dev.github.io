@@ -21,7 +21,7 @@ const JetBrains_Mono_init = JetBrains_Mono({
 
 export const metadata = {
   title: "Venkatesh",
-  description: "Protflio webiste",
+  description: "Portfolio Website",
 };
 
 
