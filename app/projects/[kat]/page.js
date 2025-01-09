@@ -10,14 +10,25 @@ import { ProjectsDetailView } from '@/components/project-detail-view';
 export const generateStaticParams = async () => {
 
     const paths = [
-        {kat: "all"},
+        { kat: "all" },
         ...projects
     ]
-    
+
     return paths.map((p) => ({
-      kat: p.kat
+        kat: p.kat
     }))
 };
+
+export async function generateMetadata({ params }) {
+    const project = projects.find((p) => p.kat === params.kat)
+
+    return {
+        title: `${project.title} | Projects`,
+        // openGraph: {
+        //     images: ['/some-specific-page-image.jpg', ...previousImages],
+        // },
+    };
+}
 
 export default function ProjectsDetailPage({ params }) {
 
@@ -28,10 +39,10 @@ export default function ProjectsDetailPage({ params }) {
             {
                 params.kat === "all" ? (
                     <div className='py-[136px]'>
-                        <AllProjects/>
+                        <AllProjects />
                     </div>
-                ):(
-                    <ProjectsDetailView project={project}/>
+                ) : (
+                    <ProjectsDetailView project={project} />
                 )
             }
         </>

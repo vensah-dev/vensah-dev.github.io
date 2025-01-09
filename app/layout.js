@@ -20,7 +20,9 @@ const JetBrains_Mono_init = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Venkatesh",
+  title: {
+    default: "Venkatesh"
+  },
   description: "Portfolio Website",
   content: "VensahDev or Venkatesh's portfolio website. Search Terms: Vensah Dev Vensah-Dev Venkatesh Devendran Attentia Smart Sheet Plantanator 8000"
 };
@@ -31,10 +33,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${Ubuntu_init.variable} ${JetBrains_Mono_init.variable} antialiased scroll-smooth scrollbar-thumb-black overflow-x-hidden`} >
 
-      <head>
+      {/* <head>
         <link rel='icon' href='icons/favicon.png' />
         <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"></link>
-      </head>
+      </head> */}
+
 
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
         <Navbar />

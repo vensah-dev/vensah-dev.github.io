@@ -22,6 +22,12 @@ import ProjectThumbnail from '@/components/project-thumbnail';
 //Data
 import { projects } from '../../lib/projects';
 
+// export const metadata = {
+//     title: "Projects | Venkatesh",
+//     description: "Portfolio Website",
+//     content: "VensahDev or Venkatesh's portfolio website. Search Terms: Vensah Dev Vensah-Dev Venkatesh Devendran Attentia Smart Sheet Plantanator 8000"
+// };
+
 export default function Projects() {
     const router = useRouter()
 
