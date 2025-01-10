@@ -24,11 +24,15 @@ export async function generateMetadata({ params }) {
 
     return {
         title: `${project ? `${project.title} | Projects ` : "All Projects | Projects"}`,
+        icons: {
+            icon: `${project ? project.icon : "/icons/favicon.ico"}`,
+        },
         // openGraph: {
         //     images: ['/some-specific-page-image.jpg', ...previousImages],
         // },
     };
 }
+
 
 export default function ProjectsDetailPage({ params }) {
 
