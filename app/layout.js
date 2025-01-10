@@ -26,9 +26,9 @@ export const metadata = {
   },
   description: "Portfolio Website",
   content: "VensahDev or Venkatesh's portfolio website. Search Terms: Vensah Dev Vensah-Dev Venkatesh Devendran Attentia Smart Sheet Plantanator 8000",
-  // icons: {
-  //   icon: "/icons/apple-touch-icon.png",
-  // },
+  icons: {
+    icon: "/icons/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -41,8 +41,8 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"></link>
       </head> */}
 
-      <link rel="icon" href="/icons/apple-touch-icon.png" sizes="any" />
-      <link rel="apple-touch-icon" sizes="any" href="/icons/apple-touch-icon.png" /> {/* Recommended size */}
+      {/* <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+      <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="any" /> */}
 
 
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
