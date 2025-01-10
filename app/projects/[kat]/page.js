@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
     const project = projects.find((p) => p.kat === params.kat)
 
     return {
-        title: `${project.title} | Projects`,
+        title: `${project ? `${project.title} | Projects ` : "All Projects | Venkatesh"}`,
         // openGraph: {
         //     images: ['/some-specific-page-image.jpg', ...previousImages],
         // },

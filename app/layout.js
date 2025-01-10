@@ -21,12 +21,15 @@ const JetBrains_Mono_init = JetBrains_Mono({
 
 export const metadata = {
   title: {
+    template: "%s | Venkatesh",
     default: "Venkatesh"
   },
   description: "Portfolio Website",
-  content: "VensahDev or Venkatesh's portfolio website. Search Terms: Vensah Dev Vensah-Dev Venkatesh Devendran Attentia Smart Sheet Plantanator 8000"
+  content: "VensahDev or Venkatesh's portfolio website. Search Terms: Vensah Dev Vensah-Dev Venkatesh Devendran Attentia Smart Sheet Plantanator 8000",
+  // icons: {
+  //   icon: "/icons/apple-touch-icon.png",
+  // },
 };
-
 
 export default function RootLayout({ children }) {
 
@@ -37,6 +40,9 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='icons/favicon.png' />
         <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"></link>
       </head> */}
+
+      <link rel="icon" href="/icons/apple-touch-icon.png" sizes="any" />
+      <link rel="apple-touch-icon" sizes="any" href="/icons/apple-touch-icon.png" /> {/* Recommended size */}
 
 
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">

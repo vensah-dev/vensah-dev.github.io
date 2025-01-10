@@ -1,4 +1,3 @@
-
 //React
 import React from 'react'
 
@@ -9,16 +8,13 @@ import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
 
-import { useRouter } from 'next/navigation'
 
 
-export default function ProjectThumbnail({project}){
-    const router = useRouter()
-
-    return(
-        <Link href={`/projects/${project.kat}`} className='group w-full lg:hover:opacity-70 active:opacity-100' onClick={()=>{console.log(image)}}>
+export default function ProjectThumbnail({ project }) {
+    return (
+        <Link href={`/projects/${project.kat}`} className='group w-full lg:hover:opacity-70 active:opacity-100' onClick={() => { console.log(image) }}>
             <div className='flex-col bg-secondary rounded-[1rem] overflow-clip p-2 group-active:brightness-125  transition-all duration-350'>
-                <div className='opacity-80 relative w-[(100vw-128px)/3] rounded-[0.5rem] overflow-clip  group-active:opacity-70 lg:group-active:brightness-75 transition-all duration-350' style={{aspectRatio: "540 / 300"}}>
+                <div className='opacity-80 relative w-[(100vw-128px)/3] rounded-[0.5rem] overflow-clip  group-active:opacity-70 lg:group-active:brightness-75 transition-all duration-350' style={{ aspectRatio: "540 / 300" }}>
                     <Image
                         src={project.image}
                         fill
@@ -33,8 +29,8 @@ export default function ProjectThumbnail({project}){
 
                     <div className='flex overflow-scroll w-[100%] no-scrollbar gap-2'>
                         {
-                            project.tags.map((tag, index)=>(
-                                <div key={index} className={`px-3 py-1 rounded-full bg-opacity-50`} style={{backgroundColor: tag.color}}>
+                            project.tags.map((tag, index) => (
+                                <div key={index} className={`px-3 py-1 rounded-full bg-opacity-50`} style={{ backgroundColor: tag.color }}>
                                     <p className='whitespace-nowrap'>{tag.title}</p>
                                 </div>
                             ))
