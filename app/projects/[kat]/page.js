@@ -27,9 +27,18 @@ export async function generateMetadata({ params }) {
         icons: {
             icon: `${project ? project.icon : "/icons/favicon.ico"}`,
         },
-        // openGraph: {
-        //     images: ['/some-specific-page-image.jpg', ...previousImages],
-        // },
+        openGraph: {
+            title: project.title,
+            description: project.description,
+            images: [
+                {
+                    type: project.image,
+                    width: 540,
+                    height: 300,
+                    url: `/opengraph/${project.kat}`
+                }
+            ]
+        },
     };
 }
 

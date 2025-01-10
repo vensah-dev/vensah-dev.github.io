@@ -29,6 +29,18 @@ export const metadata = {
   icons: {
     icon: "/icons/favicon.ico",
   },
+  openGraph: {
+    title: "Venkatesh",
+    description: "Portfolio Website",
+    images: [
+      {
+        type: "/icons/favicon.ico",
+        width: 500,
+        height: 500,
+        url: `/opengraph/`
+      }
+    ]
+  },
 };
 
 export default function RootLayout({ children }) {
