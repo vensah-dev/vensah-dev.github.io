@@ -6,6 +6,7 @@ import React from 'react';
 import { projects } from '../../../lib/projects';
 import { AllProjects } from '@/components/all-projects';
 import { ProjectsDetailView } from '@/components/project-detail-view';
+import Head from 'next/head';
 
 export const generateStaticParams = async () => {
 
@@ -55,6 +56,21 @@ export default function ProjectsDetailPage({ params }) {
 
     return (
         <>
+            <Head>
+                <meta property="og:url" content="https://vensah-dev.github.io/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={`${project.title} | Venkatesh`} />
+                <meta property="og:description" content={project.description} />
+                <meta property="og:image" content={`https://vensah-dev.github.io${project.image}`} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="vensah-dev.github.io" />
+                <meta property="twitter:url" content="https://vensah-dev.github.io/" />
+                <meta name="twitter:title" content={`${project.title} | Venkatesh`} />
+                <meta name="twitter:description" content={project.description} />
+                <meta name="twitter:image" content={`https://vensah-dev.github.io${project.image}`} />
+
+            </Head>
             {
                 params.kat === "all" ? (
                     <div className='py-[136px]'>
