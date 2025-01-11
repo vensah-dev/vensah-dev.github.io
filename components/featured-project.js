@@ -2,6 +2,7 @@
 
 //React
 import React from 'react'
+import { useState, useEffect } from 'react';
 
 //Next Stuff
 import Image from "next/image";
@@ -10,22 +11,41 @@ import { useRouter } from 'next/navigation'
 
 //components
 import { PrimaryButton } from '@/components/primary-button';
+import Tags from '@/components/project-tag';
 
 
 export default function FeaturedProject({ project }) {
     const router = useRouter()
 
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+
+        if (typeof window !== 'undefined') {
+
+            const handleResize = () => setWidth(window.innerWidth);
+
+            window.addEventListener('resize', handleResize);
+
+            handleResize(); // Initial set on mount
+
+            return () => window.removeEventListener('resize', handleResize);
+
+        }
+
+    }, []);
+
     return (
         <div className=' w-screen'>
 
             {/* featured project image */}
-            <div className={` h-[136px] w-full lg:hidden`} style={{ backgroundColor: project.navbarColor }} />
-            <div className={`lg:absolute relative top-0 w-screen lg:h-auto h-[35vh] -z-50 lg:aspect-[1728/731] aspect-auto`} style={{ aspectRatio: "" }}>
+            <div className={` h-[136px] w-full xl:hidden`} style={{ backgroundColor: project.navbarColor }} />
+            <div className={`xl:absolute relative top-0 w-screen lg:h-auto h-[35vh] -z-50 lg:aspect-[1728/832] aspect-auto`} style={{ aspectRatio: "" }}>
                 <Image
                     src={project.banner + ".png"}
                     fill
                     quality={100}
-                    className='object-cover hidden lg:block'
+                    className='object-cover hidden xl:block'
                     alt={project.title + "-banner"}
                 />
 
@@ -33,15 +53,15 @@ export default function FeaturedProject({ project }) {
                     src={project.banner + "-mobile.png"}
                     fill
                     quality={100}
-                    className='object-cover lg:hidden block'
+                    className='object-cover xl:hidden block'
                     alt={project.title + "-banner"}
                 />
             </div>
 
             {/* featured project description */}
-            <div className='lg:w-[50vw] w-full lg:bg-primary lg:bg-opacity-50 bg-secondary backdrop-blur-[999px] top-0 flex xl:items-center md:px-16 px-4 xl:pt-0 lg:pt-[136px] lg:aspect-[864/731] aspect-auto lg:pb-0 py-8'>
+            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 bg-secondary backdrop-blur-[999px] top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
 
-                <div className='flex-col'>
+                <div className={`flex-col ${width < 1490 && width > 1024 ? "pt-[136px]" : "pt-0"}`}>
 
                     <div className='lg:flex-col md:flex flex-col xl:gap-10 gap-4'>
                         <div className='lg:block relative lg:w-[30vw] md:w-[60vw] w-[80vw]' style={{ aspectRatio: "3 / 1" }}>
@@ -58,13 +78,7 @@ export default function FeaturedProject({ project }) {
                     </div>
 
                     <div className='flex overflow-scroll w-full no-scrollbar gap-2'>
-                        {
-                            project.tags.map((tag, index) => (
-                                <div key={index} className={`px-4 py-1 rounded-full bg-opacity-50`} style={{ backgroundColor: tag.color }}>
-                                    <p className='whitespace-nowrap'>{tag.title}</p>
-                                </div>
-                            ))
-                        }
+                        <Tags project={project} />
                     </div>
 
                     <PrimaryButton text={"View"} className='xl:pt-10 pt-6' handleClick={() => router.push(`/projects/${project.kat}`)} />

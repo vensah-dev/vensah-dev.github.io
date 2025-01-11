@@ -7,6 +7,7 @@ import React from 'react'
 //Next Stuff
 import Image from "next/image";
 import Link from "next/link";
+import Tags from '@/components/project-tag';
 
 
 
@@ -28,13 +29,7 @@ export default function ProjectThumbnail({ project }) {
                     <p className='text-h6 text-white100 font-normal pb-4'>{project.title}</p>
 
                     <div className='flex overflow-scroll w-[100%] no-scrollbar gap-2'>
-                        {
-                            project.tags.map((tag, index) => (
-                                <div key={index} className={`px-3 py-1 rounded-full bg-opacity-50`} style={{ backgroundColor: tag.color }}>
-                                    <p className='whitespace-nowrap'>{tag.title}</p>
-                                </div>
-                            ))
-                        }
+                        <Tags project={project} />
                     </div>
 
                 </div>
