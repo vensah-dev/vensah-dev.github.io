@@ -1,6 +1,7 @@
 'use client'
 //React
 import React from 'react'
+import { useState, useEffect } from 'react';
 
 //images
 import aboutHero from "@/public/images/about/about-hero.png"
@@ -15,42 +16,28 @@ import aboutHero from "@/public/images/about/about-hero.png"
 // import { PrimaryButton } from './primary-button';
 import { ContactGrid } from './contact-grid';
 import { TextGenerateEffect } from './ui/text-generate-effect';
-import { useState, useEffect } from 'react';
 
-
-
-const useWindowDimensions = () => {
-
-  const [height, setHeight] = useState(window.innerHeight);
-
-
-
-  useEffect(() => {
-
-    const handleResize = () => setHeight(window.innerHeight);
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-
-  }, []);
-
-
-
-  return { height };
-
-};
 
 
 export function AboutHero() {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => setHeight(window.innerHeight);
-    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+
+      const handleResize = () => setHeight(window.innerHeight);
+
+      window.addEventListener('resize', handleResize);
+
+      handleResize(); // Initial set on mount
+
+      return () => window.removeEventListener('resize', handleResize);
+
+    }
+
   }, []);
+
 
   return (
 
