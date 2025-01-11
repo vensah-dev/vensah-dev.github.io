@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
         },
         openGraph: {
             title: project ? `${project.title} | Venkatesh` : "All Projects",
-            description: project ? project.description.toString() : "Check out all the projects I was involved in over the years.",
+            description: project ? project.description.replace("\n", "") : "Check out all the projects I was involved in over the years.",
             images: [
                 project ?
                     {
