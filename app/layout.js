@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
       <meta name="title" content="Venkatesh" />
       <meta name="description" content="Portfolio Website" />
 
-      <meta property="og:url" content="https://vensah-dev.github.io" />
+      <meta property="og:url" content="https://vensah-dev.github.io/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Venkatesh" />
       <meta property="og:description" content="Portfolio Website" />
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="vensah-dev.github.io" />
-      <meta property="twitter:url" content="https://vensah-dev.github.io" />
+      <meta property="twitter:url" content="https://vensah-dev.github.io/" />
       <meta name="twitter:title" content="Venkatesh" />
       <meta name="twitter:description" content="Portfolio Website" />
       <meta name="twitter:image" content="https://vensah-dev.github.io/icons/open-graph-image.png" />
