@@ -34,10 +34,9 @@ export const metadata = {
     description: "Portfolio Website",
     images: [
       {
-        type: "/icons/open-graph-image.png",
         width: 1900,
         height: 1900,
-        url: `/opengraph/`
+        url: `/icons/open-graph-image.png`
       }
     ]
   },
