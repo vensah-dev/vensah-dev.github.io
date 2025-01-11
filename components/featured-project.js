@@ -39,13 +39,13 @@ export default function FeaturedProject({ project }) {
         <div className=' w-screen'>
 
             {/* featured project image */}
-            <div className={` h-[136px] w-full lg:hidden`} style={{ backgroundColor: project.navbarColor }} />
-            <div className={`lg:absolute relative top-0 w-screen lg:h-auto h-[35vh] -z-50 lg:aspect-[1728/832] aspect-auto`} style={{ aspectRatio: "" }}>
+            <div className={` h-[136px] w-full xl:hidden`} style={{ backgroundColor: project.navbarColor }} />
+            <div className={`xl:absolute relative top-0 w-screen lg:h-auto h-[35vh] -z-50 lg:aspect-[1728/832] aspect-auto`} style={{ aspectRatio: "" }}>
                 <Image
                     src={project.banner + ".png"}
                     fill
                     quality={100}
-                    className='object-cover hidden lg:block'
+                    className='object-cover hidden xl:block'
                     alt={project.title + "-banner"}
                 />
 
@@ -53,15 +53,15 @@ export default function FeaturedProject({ project }) {
                     src={project.banner + "-mobile.png"}
                     fill
                     quality={100}
-                    className='object-cover lg:hidden block'
+                    className='object-cover xl:hidden block'
                     alt={project.title + "-banner"}
                 />
             </div>
 
             {/* featured project description */}
-            <div className={`lg:w-[50vw] w-full lg:bg-primary lg:bg-opacity-50 bg-secondary backdrop-blur-[999px] top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 lg:aspect-[864/832] aspect-auto`}>
+            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 bg-secondary backdrop-blur-[999px] top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
 
-                <div className={`flex-col ${width < 1490 ? "pt-[136px]" : "pt-0"}`}>
+                <div className={`flex-col ${width < 1490 && width > 1024 ? "pt-[136px]" : "pt-0"}`}>
 
                     <div className='lg:flex-col md:flex flex-col xl:gap-10 gap-4'>
                         <div className='lg:block relative lg:w-[30vw] md:w-[60vw] w-[80vw]' style={{ aspectRatio: "3 / 1" }}>
