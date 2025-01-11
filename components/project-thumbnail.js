@@ -26,7 +26,7 @@ export default function ProjectThumbnail({ project }) {
 
                 <div className='flex-col w-full px-2 py-4 group-active:opacity-100'>
 
-                    <p className='text-h6 text-white100 font-normal pb-4'>{project.title}</p>
+                    <p className='whitespace-nowrap	 text-h6 text-white100 font-normal pb-4 text-ellipsis overflow-hidden'>{project.title}</p>
 
                     <div className='flex overflow-scroll w-[100%] no-scrollbar gap-2'>
                         <Tags project={project} />
