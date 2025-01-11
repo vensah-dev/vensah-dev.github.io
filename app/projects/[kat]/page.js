@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
                         ({
                             width: 1900,
                             height: 1900,
-                            url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
+                            url: `https://vensah-dev.github.io/icons/faviconAlt.png`,
                         })
                 )
             ]
