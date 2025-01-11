@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
                     {
                         width: 1080,
                         height: 600,
-                        url: `https://vensah-dev.github.io${project.image}`,
+                        url: 'https://vensah-dev.github.io' + project.image,
                     }
                     :
                     {
