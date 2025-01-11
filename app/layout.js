@@ -32,6 +32,9 @@ export const metadata = {
   openGraph: {
     title: "Venkatesh",
     description: "Portfolio Website",
+    url: "https://vensah-dev.github.io/",
+    type: "website",
+    logo: "/icons/open-graph-image.png",
     images: [
       {
         width: 1900,
