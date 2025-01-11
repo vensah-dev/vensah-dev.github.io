@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: project ? `${project.title} | Projects | Venkatesh` : "All Projects | Venkatesh",
             description: project ? project.description.replace("\n", "") : "Check out all the projects I was involved in over the years.",
-            url: "https://vensah-dev.github.io/projects" + params.kat,
+            url: "https://vensah-dev.github.io/projects/" + params.kat,
             type: "website",
             logo: "/icons/open-graph-image.png",
             images: [
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
                         ({
                             width: 1080,
                             height: 600,
-                            url: project.image,
+                            url: "https://vensah-dev.github.io" + project.image,
                         })
                         :
                         ({
