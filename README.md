@@ -10,6 +10,9 @@ When and if the site gets big enough there will be a landing page with the lates
 ## About Page
 This will be the landing page for now and the aim is to let vistors get a crash course on who am I and my skills and programming journey through a scrollable timeline and some image cards and possibly some of my projects
 
+## Testimonials Page
+Possibly make a page just for the testimonials, would be too specific toward DSA, not confirmed just an idea.
+
 ## Competencies Page
 The aim is to have a skill tree or something similar, a visual and interactive way of exploring my skills and values
 
