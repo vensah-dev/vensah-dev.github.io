@@ -41,7 +41,6 @@ export const metadata = {
         width: 600,
         height: 600,
         url: 'https://vensah-dev.github.io/icons/open-graph-image.png',
-
       }
     ]
   },
