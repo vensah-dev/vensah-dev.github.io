@@ -27,24 +27,24 @@ export async function generateMetadata({ params }) {
         icons: {
             icon: `${project ? project.icon : "/icons/favicon.ico"}`,
         },
-        openGraph: {
-            title: project ? project.title : "All Projects",
-            description: project ? project.title : "",
-            images: [
-                project ?
-                    {
-                        width: 1080,
-                        height: 600,
-                        url: project.image,
-                    }
-                    :
-                    {
-                        width: 500,
-                        height: 500,
-                        url: `/icons/open-graph-image.png`,
-                    }
-            ]
-        },
+        // openGraph: {
+        //     title: project ? project.title : "All Projects",
+        //     description: project ? project.title : "",
+        //     images: [
+        //         project ?
+        //             {
+        //                 width: 1080,
+        //                 height: 600,
+        //                 url: project.image,
+        //             }
+        //             :
+        //             {
+        //                 width: 500,
+        //                 height: 500,
+        //                 url: `/icons/open-graph-image.png`,
+        //             }
+        //     ]
+        // },
     };
 }
 

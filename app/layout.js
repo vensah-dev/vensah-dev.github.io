@@ -47,7 +47,7 @@ export const metadata = {
 
     description: "Portfolio Website",
 
-    url: "https://yourwebsite.com/",
+    url: "https://vensah-dev.github.io/",
 
     images: ["/icons/open-graph-image.png"], // Image from public folder
 
