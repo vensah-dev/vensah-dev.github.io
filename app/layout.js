@@ -41,6 +41,17 @@ export const metadata = {
       }
     ]
   },
+  openGraph: {
+
+    title: "Venkatesh",
+
+    description: "Portfolio Website",
+
+    url: "https://yourwebsite.com/",
+
+    images: ["/icons/open-graph-image.png"], // Image from public folder
+
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -57,7 +68,7 @@ export default function RootLayout({ children }) {
       <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="any" /> */}
 
       <meta name="description" content="Portfolio Website" />
-
+      {/* 
       <meta property="og:url" content="https://vensah-dev.github.io" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Venkatesh" />
@@ -69,7 +80,7 @@ export default function RootLayout({ children }) {
       <meta property="twitter:url" content="https://vensah-dev.github.io" />
       <meta name="twitter:title" content="Venkatesh" />
       <meta name="twitter:description" content="Portfolio Website" />
-      <meta name="twitter:image" content="https://vensah-dev.github.io/icons/faviconAlt.png" />
+      <meta name="twitter:image" content="https://vensah-dev.github.io/icons/faviconAlt.png" /> */}
 
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
         <Navbar />
