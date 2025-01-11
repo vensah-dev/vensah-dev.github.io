@@ -37,8 +37,8 @@ export const metadata = {
     logo: 'https://vensah-dev.github.io/icons/open-graph-image.png',
     images: [
       {
-        width: 1900,
-        height: 1900,
+        width: 1000,
+        height: 1000,
         url: 'https://vensah-dev.github.io/icons/open-graph-image.png',
       }
     ]
