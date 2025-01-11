@@ -63,14 +63,14 @@ export default function ProjectsDetailPage({ params }) {
                             <meta property="og:url" content="https://vensah-dev.github.io/" />
                             <meta property="og:type" content="website" />
                             <meta property="og:title" content={`${project.title} | Projects | Venkatesh`} />
-                            <meta property="og:description" content={project.description} />
+                            <meta property="og:description" content={project.description.replace("\n", "")} />
                             <meta property="og:image" content={`https://vensah-dev.github.io${project.image}`} />
 
                             <meta name="twitter:card" content="summary_large_image" />
                             <meta property="twitter:domain" content="vensah-dev.github.io" />
                             <meta property="twitter:url" content="https://vensah-dev.github.io/" />
                             <meta name="twitter:title" content={`${project.title} | Projects | Venkatesh`} />
-                            <meta name="twitter:description" content={project.description} />
+                            <meta name="twitter:description" content={project.description.replace("\n", "")} />
                             <meta name="twitter:image" content={`https://vensah-dev.github.io${project.image}`} />
                         </>
 
