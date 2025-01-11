@@ -29,17 +29,17 @@ export const metadata = {
   icons: {
     icon: "/icons/favicon.ico",
   },
-  openGraph: {
-    title: "Venkatesh",
-    description: "Portfolio Website",
-    images: [
-      {
-        width: 1900,
-        height: 1900,
-        url: `https://vensah-dev.github.io/icons/open-graph-image.png`
-      }
-    ]
-  },
+  // openGraph: {
+  //   title: "Venkatesh",
+  //   description: "Portfolio Website",
+  //   images: [
+  //     {
+  //       width: 1900,
+  //       height: 1900,
+  //       url: `https://vensah-dev.github.io/icons/open-graph-image.png`
+  //     }
+  //   ]
+  // },
   // openGraph: {
 
   //   title: "Venkatesh",
@@ -66,20 +66,21 @@ export default function RootLayout({ children }) {
       {/* <link rel="icon" href="/icons/favicon.ico" sizes="any" />
       <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="any" /> */}
 
+      <meta name="title" content="Venkatesh" />
       <meta name="description" content="Portfolio Website" />
-      {/* 
+
       <meta property="og:url" content="https://vensah-dev.github.io" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Venkatesh" />
       <meta property="og:description" content="Portfolio Website" />
-      <meta property="og:image" content="https://vensah-dev.github.io/icons/faviconAlt.png" />
+      <meta property="og:image" content="https://vensah-dev.github.io/icons/open-graph-image.png" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="vensah-dev.github.io" />
       <meta property="twitter:url" content="https://vensah-dev.github.io" />
       <meta name="twitter:title" content="Venkatesh" />
       <meta name="twitter:description" content="Portfolio Website" />
-      <meta name="twitter:image" content="https://vensah-dev.github.io/icons/faviconAlt.png" /> */}
+      <meta name="twitter:image" content="https://vensah-dev.github.io/icons/open-graph-image.png" />
 
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
         <Navbar />
