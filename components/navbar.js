@@ -58,10 +58,10 @@ export function Navbar({ className, style }) {
       title: "Projects",
       url: "/projects",
     },
-    // {
-    //   title: "Testimonials",
-    //   url: "/testimonials",
-    // },
+    {
+      title: "Testimonials",
+      url: "/testimonials",
+    },
     // {
     //   title: "Competencies",
     //   url: "/competencies",
