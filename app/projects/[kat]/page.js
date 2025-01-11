@@ -56,7 +56,7 @@ export default function ProjectsDetailPage({ params }) {
 
     return (
         <>
-            {
+            {/* {
                 project ? (
                     <>
                         <meta property="og:url" content="https://vensah-dev.github.io/" />
@@ -90,7 +90,7 @@ export default function ProjectsDetailPage({ params }) {
                     </>
 
                 )
-            }
+            } */}
             {
                 params.kat === "all" ? (
                     <div className='py-[136px]'>
