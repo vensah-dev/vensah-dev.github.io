@@ -28,24 +28,24 @@ export async function generateMetadata({ params }) {
         icons: {
             icon: `${project ? project.icon : "/icons/favicon.ico"}`,
         },
-        openGraph: {
-            title: project ? `${project.title} | Venkatesh` : "All Projects",
-            description: project ? project.description.replace("\n", "") : "Check out all the projects I was involved in over the years.",
-            images: [
-                project ?
-                    {
-                        width: 1080,
-                        height: 600,
-                        url: 'https://vensah-dev.github.io' + project.image,
-                    }
-                    :
-                    {
-                        width: 1900,
-                        height: 1900,
-                        url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
-                    }
-            ]
-        },
+        // openGraph: {
+        //     title: project ? `${project.title} | Venkatesh` : "All Projects",
+        //     description: project ? project.description.replace("\n", "") : "Check out all the projects I was involved in over the years.",
+        //     images: [
+        //         project ?
+        //             {
+        //                 width: 1080,
+        //                 height: 600,
+        //                 url: 'https://vensah-dev.github.io' + project.image,
+        //             }
+        //             :
+        //             {
+        //                 width: 1900,
+        //                 height: 1900,
+        //                 url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
+        //             }
+        //     ]
+        // },
     };
 }
 
@@ -57,19 +57,41 @@ export default function ProjectsDetailPage({ params }) {
     return (
         <>
             <Head>
-                <meta property="og:url" content="https://vensah-dev.github.io/" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content={`${project.title} | Venkatesh`} />
-                <meta property="og:description" content={project.description} />
-                <meta property="og:image" content={`https://vensah-dev.github.io${project.image}`} />
+                {
+                    project ? (
+                        <>
+                            <meta property="og:url" content="https://vensah-dev.github.io/" />
+                            <meta property="og:type" content="website" />
+                            <meta property="og:title" content={`${project.title} | Venkatesh`} />
+                            <meta property="og:description" content={project.description} />
+                            <meta property="og:image" content={`https://vensah-dev.github.io${project.image}`} />
 
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:domain" content="vensah-dev.github.io" />
-                <meta property="twitter:url" content="https://vensah-dev.github.io/" />
-                <meta name="twitter:title" content={`${project.title} | Venkatesh`} />
-                <meta name="twitter:description" content={project.description} />
-                <meta name="twitter:image" content={`https://vensah-dev.github.io${project.image}`} />
+                            <meta name="twitter:card" content="summary_large_image" />
+                            <meta property="twitter:domain" content="vensah-dev.github.io" />
+                            <meta property="twitter:url" content="https://vensah-dev.github.io/" />
+                            <meta name="twitter:title" content={`${project.title} | Venkatesh`} />
+                            <meta name="twitter:description" content={project.description} />
+                            <meta name="twitter:image" content={`https://vensah-dev.github.io${project.image}`} />
+                        </>
 
+                    ) : (
+                        <>
+                            <meta property="og:url" content="https://vensah-dev.github.io/" />
+                            <meta property="og:type" content="website" />
+                            <meta property="og:title" content="All Projects | Projects | Venkatesh" />
+                            <meta property="og:description" content="Check out all the projects I was involved in over the years." />
+                            <meta property="og:image" content="https://vensah-dev.github.io/icons/open-graph-image.png" />
+
+                            <meta name="twitter:card" content="summary_large_image" />
+                            <meta property="twitter:domain" content="vensah-dev.github.io" />
+                            <meta property="twitter:url" content="https://vensah-dev.github.io/" />
+                            <meta name="twitter:title" content="All Projects | Projects | Venkatesh" />
+                            <meta name="twitter:description" content="Check out all the projects I was involved in over the years." />
+                            <meta name="twitter:image" content="https://vensah-dev.github.io/icons/open-graph-image.png" />
+                        </>
+
+                    )
+                }
             </Head>
             {
                 params.kat === "all" ? (
