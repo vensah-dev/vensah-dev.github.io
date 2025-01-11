@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
             icon: `${project ? project.icon : "/icons/favicon.ico"}`,
         },
         openGraph: {
-            title: project ? `${project.title} | Projects | Venkatesh` : "All Projects | Venkatesh",
+            title: project ? `${project.title} | Projects | Venkatesh` : "All Projects | Projects | Venkatesh",
             description: project ? project.description.replace(/[\n\r\t]/gm, "") : "Check out all the projects I was involved in over the years!",
             url: "https://vensah-dev.github.io/projects/" + params.kat,
             type: "website",
