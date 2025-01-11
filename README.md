@@ -22,4 +22,4 @@ The aim is to have a full archive of all my projects, however most of them will 
 ## Achievements Page
 Super similar to the Projects Page but for all of my awards and certificates, so idk for sure if I will make this page.
 
-for lazy people (me) here the [link](https://vensah-dev.github.io)
+for lazy people (me) here the
