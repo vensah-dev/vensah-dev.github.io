@@ -29,13 +29,20 @@ export async function generateMetadata({ params }) {
         },
         openGraph: {
             title: project ? `${project.title} | Venkatesh` : "All Projects",
-            description: project ? project.description : "",
+            description: project ? project.description.toString() : "Check out all the projects I was involved in over the years.",
             images: [
-                {
-                    width: 1080,
-                    height: 600,
-                    url: project.image,
-                }
+                project ?
+                    {
+                        width: 1080,
+                        height: 600,
+                        url: 'https://vensah-dev.github.io' + project.image,
+                    }
+                    :
+                    {
+                        width: 1900,
+                        height: 1900,
+                        url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
+                    }
             ]
         },
     };
