@@ -32,18 +32,20 @@ export async function generateMetadata({ params }) {
             title: project ? `${project.title} | Projects | Venkatesh` : "All Projects | Venkatesh",
             description: project ? project.description.replace("\n", "") : "Check out all the projects I was involved in over the years.",
             images: [
-                project ?
-                    {
-                        width: 1080,
-                        height: 600,
-                        url: 'https://vensah-dev.github.io' + project.image,
-                    }
-                    :
-                    {
-                        width: 1900,
-                        height: 1900,
-                        url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
-                    }
+                (
+                    project ?
+                        ({
+                            width: 1080,
+                            height: 600,
+                            url: project.image,
+                        })
+                        :
+                        ({
+                            width: 1900,
+                            height: 1900,
+                            url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
+                        })
+                )
             ]
         },
     };
