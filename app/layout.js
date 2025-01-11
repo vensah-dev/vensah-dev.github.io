@@ -31,6 +31,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Venkatesh",
+    site_name: "Venkatesh",
     description: "Portfolio Website",
     url: "https://vensah-dev.github.io",
     type: "website",
@@ -43,28 +44,6 @@ export const metadata = {
       }
     ]
   },
-  // openGraph: {
-  //   title: "Venkatesh",
-  //   description: "Portfolio Website",
-  //   images: [
-  //     {
-  //       width: 1900,
-  //       height: 1900,
-  //       url: `https://vensah-dev.github.io/icons/open-graph-image.png`
-  //     }
-  //   ]
-  // },
-  // openGraph: {
-
-  //   title: "Venkatesh",
-
-  //   description: "Portfolio Website",
-
-  //   url: "https://vensah-dev.github.io/",
-
-  //   images: ["https://opengraph.b-cdn.net/production/images/256b3925-99fa-40dc-907b-6206f985b3ed.png?token=1UtfjeCC8ES9HyzjPLjfq0kSBzgjDx7r0YeCHToIi14&height=1200&width=1200&expires=33272581653"], // Image from public folder
-
-  // },
 };
 
 export default function RootLayout({ children }) {
