@@ -62,14 +62,14 @@ export default function RootLayout({ children }) {
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Venkatesh" />
       <meta property="og:description" content="Portfolio Website" />
-      <meta property="og:image" content="https://vensah-dev.github.io" />
+      <meta property="og:image" content="https://vensah-dev.github.io/icons/favivon.png" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="vensah-dev.github.io" />
       <meta property="twitter:url" content="https://vensah-dev.github.io" />
       <meta name="twitter:title" content="Venkatesh" />
       <meta name="twitter:description" content="Portfolio Website" />
-      <meta name="twitter:image" content="https://vensah-dev.github.io" />
+      <meta name="twitter:image" content="https://vensah-dev.github.io/icons/favivon.png" />
 
       <body className="bg-primary text-white100 font-ubuntu scroll-smooth">
         <Navbar />
