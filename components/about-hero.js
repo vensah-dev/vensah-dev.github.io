@@ -14,15 +14,43 @@ import aboutHero from "@/public/images/about/about-hero.png"
 // import { PrimaryButton } from './primary-button';
 import { ContactGrid } from './contact-grid';
 import { TextGenerateEffect } from './ui/text-generate-effect';
+import { useState, useEffect } from 'react';
+
+
+
+const useWindowDimensions = () => {
+
+  const [height, setHeight] = useState(window.innerHeight);
+
+
+
+  useEffect(() => {
+
+    const handleResize = () => setHeight(window.innerHeight);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+
+  }, []);
+
+
+
+  return { height };
+
+};
+
 
 export function AboutHero() {
+  const { height } = useWindowDimensions();
+
   return (
 
     <div className="bg-about-hero h-screen bg-cover bg-repeat-x bg-inherit lg:bg-fixed animate-[bg-pan-left_100s_linear_infinite] md:animate-[bg-pan-left_30s_linear_infinite]">
-      <div className="w-screen h-screen flex items-center bg-opacity-0 bg-gradient-to-t from-primary from-20% to-white-opacity-0 to-85% md:bg-gradient-to-r md:from-primary md:from-20% md:to-white-opacity-0 md:to-85% z-100">
+      <div className={`w-screen h-screen flex ${height > 760 ? "items-center" : "pt-[136px]"} bg-opacity-0 bg-gradient-to-t from-primary from-20% to-white-opacity-0 to-85% md:bg-gradient-to-r md:from-primary md:from-20% md:to-white-opacity-0 md:to-85% z-100`}>
 
         <div className='w-full z-0 mx-4 md:mx-16 md:w-2/3 '>
-          <div className=' font-jetBrainsMono font-medium tracking-[-0.05em] flex text-h5 md:text-h4'>
+          <div className=' font-jetBrainsMono font-medium md:tracking-[-0.05em] tracking-[-0.14em] flex text-h5 md:text-h4'>
 
             <TextGenerateEffect
               words={"Text"}
@@ -54,7 +82,7 @@ export function AboutHero() {
 
           <TextGenerateEffect
             words="Student, Developer & President"
-            className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 w-full lg:w-[75%] xl:w-[55%]"}
+            className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 w-full md:w-[calc(100vw-128px)] 2xl:w-[55%]"}
             color={"white100"}
             duration={1}
           />
