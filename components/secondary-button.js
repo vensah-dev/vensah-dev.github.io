@@ -7,9 +7,9 @@ export function SecondaryButton({ text, position, icon, handleClick, className }
                 <span className="absolute inset-[-1000%] animate-[spin_2.5s_linear_infinite] bg-[conic-gradient(from_0deg,#679877_0deg,#C5CC66_200deg,#679877_360deg)]" />
                 <span className="inline-flex h-full w-full transition-all ease-in-out duration-400 items-center justify-center rounded-full active:brightness-75 backdrop-blur-xl text-accent">
 
-                    <span className='bg-primary px-6 py-3 m-[1.5px] gap-4 rounded-full items-center inline-flex justify-center transition-all ease-in-out duration-400'>
+                    <span className='bg-primary px-6 py-3 m-[1.5px] gap-4 rounded-full hover:px-8 hover:tracking-[-0.015em] active:px-6 items-center inline-flex justify-center transition-all ease-in-out duration-400'>
                         {position === "left" && icon}
-                        {text}
+                        <h1 className=''>{text}</h1>
                         {position === "right" && icon}
                     </span>
 
