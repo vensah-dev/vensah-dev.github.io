@@ -31,18 +31,11 @@ export async function generateMetadata({ params }) {
             title: project ? `${project.title} | Venkatesh` : "All Projects",
             description: project ? project.description : "",
             images: [
-                project ?
-                    {
-                        width: 1080,
-                        height: 600,
-                        url: 'https://vensah-dev.github.io' + project.image,
-                    }
-                    :
-                    {
-                        width: 1900,
-                        height: 1900,
-                        url: `https://vensah-dev.github.io/icons/open-graph-image.png`,
-                    }
+                {
+                    width: 1080,
+                    height: 600,
+                    url: project.image,
+                }
             ]
         },
     };
