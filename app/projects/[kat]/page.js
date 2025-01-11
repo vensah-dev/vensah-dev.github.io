@@ -33,17 +33,15 @@ export async function generateMetadata({ params }) {
             images: [
                 project ?
                     {
-                        type: project.image,
-                        width: 540,
-                        height: 300,
-                        url: `/opengraph/${project.kat}`
+                        width: 1080,
+                        height: 600,
+                        url: project.image,
                     }
                     :
                     {
-                        type: "/icons/favicon.ico",
                         width: 500,
                         height: 500,
-                        url: `/opengraph/projects/all`
+                        url: `/icons/open-graph-image.png`,
                     }
             ]
         },
