@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
             description: project ? project.description.replace(/[\n\r\t]/gm, "") : "Check out all the projects I was involved in over the years.",
             url: "https://vensah-dev.github.io/projects/" + params.kat,
             type: "website",
-            logo: "/icons/open-graph-image.png",
+            logo: 'https://vensah-dev.github.io/icons/open-graph-image.png',
             images: [
                 (
                     project ?

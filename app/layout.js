@@ -34,12 +34,12 @@ export const metadata = {
     description: "Portfolio Website",
     url: "https://vensah-dev.github.io/",
     type: "website",
-    logo: "/icons/open-graph-image.png",
+    logo: 'https://vensah-dev.github.io/icons/open-graph-image.png',
     images: [
       {
         width: 1900,
         height: 1900,
-        url: '/icons/open-graph-image.png',
+        url: 'https://vensah-dev.github.io/icons/open-graph-image.png',
       }
     ]
   },
