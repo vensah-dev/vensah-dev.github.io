@@ -28,8 +28,8 @@ export async function generateMetadata({ params }) {
             icon: `${project ? project.icon : "/icons/favicon.ico"}`,
         },
         openGraph: {
-            title: project ? project.title : "All Projects",
-            description: project ? project.title : "",
+            title: project ? `${project.title} | Venkatesh` : "All Projects",
+            description: project ? project.description : "",
             images: [
                 project ?
                     {
