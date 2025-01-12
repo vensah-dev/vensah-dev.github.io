@@ -28,7 +28,7 @@ export default function ProjectThumbnail({ project }) {
 
                     <p className='whitespace-nowrap	 text-h6 text-white100 font-normal pb-4 text-ellipsis overflow-hidden'>{project.title}</p>
 
-                    <div className='flex overflow-scroll w-[100%] no-scrollbar gap-2'>
+                    <div className='flex overflow-scroll w-[100%] no-scrollbar gap-3'>
                         <Tags project={project} />
                     </div>
 

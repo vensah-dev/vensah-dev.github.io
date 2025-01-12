@@ -77,7 +77,7 @@ export default function FeaturedProject({ project }) {
 
                     </div>
 
-                    <div className='flex overflow-scroll w-full no-scrollbar gap-2'>
+                    <div className='flex overflow-scroll w-full no-scrollbar gap-3'>
                         <Tags project={project} />
                     </div>
 
