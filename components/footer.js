@@ -32,7 +32,7 @@ const Footer = () => {
               />
             </div>
 
-            <p className='text-white75'>© Venkatesh Devendran - Designed & Developed.</p>
+            <p className='text-white75'>Designed and Developed by Venkatesh Devendran.</p>
           </div>
 
         </button>
