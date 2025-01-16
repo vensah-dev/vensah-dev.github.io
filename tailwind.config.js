@@ -21,7 +21,7 @@ module.exports = {
 				foreground: 'var(--foreground)',
 				accent: '#679877',
 				accentSecondary: '#C5CC66',
-				accentGradient: 'linear-gradient(90deg, #679877 0%, #BDBD75 100%)',
+				accentGradient: 'linear-gradient(90deg, #679877 0%, #C5CC66 100%)',
 				primary: '#070907',
 				secondary: '#181b18',
 				tertiary: '#222622',
