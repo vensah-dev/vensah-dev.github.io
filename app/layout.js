@@ -50,6 +50,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${Ubuntu_init.variable} ${JetBrains_Mono_init.variable} antialiased scroll-smooth scrollbar-thumb-black overflow-x-hidden`} >
+      
+    <head>
+      <meta name="google-site-verification" content="nrdAm6ic-JcEe9noCmCR_ICH-QowgyF9qMPy2SQd3Ak" />
+    </head>
 
       {/* <head>
         <link rel='icon' href='icons/favicon.png' />
