@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vensah-dev.github.io/sitemap.xml
