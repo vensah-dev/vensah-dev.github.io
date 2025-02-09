@@ -70,6 +70,10 @@ export function Navbar({ className, style }) {
     //   title: "Achievements",
     //   url: "/achievements",
     // },
+    // {
+    //   title: "Blogs",
+    //   url: "/achievements",
+    // },
   ]
 
   return (
@@ -123,7 +127,7 @@ export function Navbar({ className, style }) {
             {
               navItems.map((navItem, index) => (
                 <Link href={navItem.url} key={index} >
-                  <p className={`text-base hover:text-accent inline py-12 px-8 ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
+                  <p className={`text-base hover:text-accent inline py-12 px-6 ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
                 </Link>
               ))
             }
