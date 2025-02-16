@@ -2,7 +2,7 @@ import React from 'react'
 
 //icons
 import { FaGithub } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
+import { GrLinkedin } from "react-icons/gr";
 import { SiChessdotcom } from "react-icons/si";
 
 
@@ -18,8 +18,8 @@ export function ContactGrid({about = false, footer = false}){
               <FaGithub className={`w-8 h-8 hover:fill-white100 fill-white75 ${about === true ? 'animate-blurfadein' : ''}`} style={{animationDelay: "1s"}} />
             </a>
 
-            <a href="https://www.instagram.com/vensah_dev">
-              <RiInstagramFill className={`w-8 h-8 hover:fill-white100 fill-white75 ${about === true ? 'animate-blurfadein' : ''}`} style={{animationDelay: "1.3s"}}/>
+            <a href="https://www.linkedin.com/in/vensah/">
+              <GrLinkedin className={`w-8 h-8 hover:fill-white100 fill-white75 ${about === true ? 'animate-blurfadein' : ''}`} style={{animationDelay: "1.3s"}}/>
             </a>
 
             <a href="https://www.chess.com/member/vensah">
