@@ -112,7 +112,7 @@ export function Navbar({ className, style }) {
             {
               navItems.map((navItem, index) => (
                 <Link href={navItem.url} key={index} onClick={() => closeSidebar()}>
-                  <p className={` hover:text-accent py-4 text-center ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
+                  <p className={`font-thin font-ubuntu hover:text-accent py-4 text-center ${pathname === navItem.url ? "text-accent" : "text-white75"}`}>{navItem.title}</p>
                 </Link>
               ))
             }
