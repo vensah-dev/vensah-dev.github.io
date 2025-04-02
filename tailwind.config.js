@@ -35,7 +35,7 @@ module.exports = {
 				white5: 'hsla(240, 2%, 88%, 0.05)'
 			},
 			fontFamily: {
-				ubuntu: ["var(--font-ubuntu)"],
+				ubuntu: ["var(--font-ubuntu-sans)"],
 				jetBrainsMono: ["var(--font-jetBrains-mono)"]
 			},
 			fontSize: {

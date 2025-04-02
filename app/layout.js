@@ -1,16 +1,15 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-import { Ubuntu } from 'next/font/google'
+import { Ubuntu_Sans } from 'next/font/google'
 import { JetBrains_Mono } from 'next/font/google'
 
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const Ubuntu_init = Ubuntu({
+const Ubuntu_init = Ubuntu_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-ubuntu",
+  variable: "--font-ubuntu-sans",
 });
 
 const JetBrains_Mono_init = JetBrains_Mono({
