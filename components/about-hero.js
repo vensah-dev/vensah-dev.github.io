@@ -76,7 +76,7 @@ export function AboutHero() {
           </div>
 
           <TextGenerateEffect
-            words="Student, Developer <br>& Leader"
+            words="Student, Developer <br> & Leader"
             className={"text-h3 md:text-h1 font-bold leading-tight pb-4 md:pb-8 w-full md:w-[calc(100vw-128px)] xl:w-[80%] 2xl:w-[55%]"}
             color={"white100"}
             duration={1}
