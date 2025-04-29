@@ -91,7 +91,7 @@ export function ProjectsDetailView({ project }) {
                     ) : null
                 }
                 {
-                    project.showParagraph ? (
+                    project.paragraph ? (
                         <h1 className='text-h6 text-white75 font-extralight w-full  pt-10 text-justify'>{project.paragraph}</h1>
                     ) : null
                 }
