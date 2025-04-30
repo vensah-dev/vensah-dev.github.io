@@ -13,20 +13,22 @@ import Tags from '@/components/project-tag';
 
 export default function ProjectThumbnail({ project }) {
     return (
-        <Link href={`/projects/${project.kat}`} className='group w-full lg:hover:opacity-70 active:opacity-100' onClick={() => { console.log(image) }}>
             <div className='flex-col bg-secondary rounded-[1rem] overflow-clip p-2 group-active:brightness-125  transition-all duration-350'>
-                <div className='opacity-80 relative w-[(100vw-128px)/3] rounded-[0.5rem] overflow-clip  group-active:opacity-70 lg:group-active:brightness-75 transition-all duration-350' style={{ aspectRatio: "540 / 300" }}>
-                    <Image
-                        src={project.image}
-                        fill
-                        className='object-cover'
-                        alt={String(project.title) + ' Thumbnail'}
-                    />
-                </div>
+                <Link href={`/projects/${project.kat}`} className='group w-full lg:hover:opacity-70 active:opacity-100' onClick={() => { console.log(image) }}>
+                    <div className='opacity-80 relative w-[(100vw-128px)/3] rounded-[0.5rem] overflow-clip  group-active:opacity-70 lg:group-active:brightness-75 transition-all duration-350' style={{ aspectRatio: "540 / 300" }}>
+                        <Image
+                            src={project.image}
+                            fill
+                            className='object-cover'
+                            alt={String(project.title) + ' Thumbnail'}
+                        />
+                    </div>
 
-                <div className='flex-col w-full px-2 py-4 group-active:opacity-100'>
+                    <p className='whitespace-nowrap	pt-4 pl-2 text-h6 text-white100 font-normal pb-4 text-ellipsis overflow-hidden'>{project.title}</p>
 
-                    <p className='whitespace-nowrap	 text-h6 text-white100 font-normal pb-4 text-ellipsis overflow-hidden'>{project.title}</p>
+                </Link>
+
+                <div className='flex-col w-full pl-2 pb-4 group-active:opacity-100'>
 
                     <div className='flex overflow-scroll w-[100%] no-scrollbar gap-3'>
                         <Tags project={project} />
@@ -35,6 +37,5 @@ export default function ProjectThumbnail({ project }) {
                 </div>
 
             </div>
-        </Link>
     )
 }
