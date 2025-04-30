@@ -24,17 +24,29 @@ export default function ProjectThumbnail({ project }) {
                         />
                     </div>
 
-                    <p className='whitespace-nowrap	pt-4 pl-2 text-h6 text-white100 font-normal pb-4 text-ellipsis overflow-hidden'>{project.title}</p>
+                    <p className='whitespace-nowrap	pt-4 pl-2 text-h6 text-white100 font-normal text-ellipsis overflow-hidden'>{project.title}</p>
+
+                    {
+                        project.tags.length > 0 ? null:
+                        (
+                            <p className='px-2 pt-1 h-[48px] text-white50 font-normal pb-4 overflow-hidden line-clamp-2'>{project.description}</p>
+                        )
+                    }
 
                 </Link>
 
-                <div className='flex-col w-full pl-2 pb-4 group-active:opacity-100'>
+                {
+                    project.tags.length > 0 ? (
+                        <div className='flex-col w-full pl-2 py-4 group-active:opacity-100'>
+                            <div className='flex overflow-scroll w-[100%] no-scrollbar gap-3'>
 
-                    <div className='flex overflow-scroll w-[100%] no-scrollbar gap-3'>
-                        <Tags project={project} />
-                    </div>
+                                        <Tags project={project} />
 
-                </div>
+                            </div>
+                        </div>
+                    ) 
+                    : null
+                }
 
             </div>
     )
