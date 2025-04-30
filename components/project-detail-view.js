@@ -69,7 +69,7 @@ export function ProjectsDetailView({ project }) {
 
                         project.links && project.links.length > 0 ? (
                             project.links.map((link, index) => (
-                                <a href={link.url} key={index} className='block text-accent lg:w-16 lg:h-16 w-10 h-10'>{link.content}</a>
+                                <a href={link.url} key={index} className='block text-accent lg:w-16 lg:h-16 h-10'>{link.content}</a>
                             ))
                         ) : null
 
