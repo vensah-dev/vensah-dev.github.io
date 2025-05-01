@@ -100,7 +100,7 @@ module.exports = {
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
 			backgroundImage: {
-				'about-hero': "url('../public/images/about/about-hero.png')"
+				'about-hero': "url('../public/images/about/about-hero.webp')"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

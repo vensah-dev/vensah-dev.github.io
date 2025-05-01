@@ -3,9 +3,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 
-//images
-import aboutHero from "@/public/images/about/about-hero.png"
-
 //icons
 // import { IoIosArrowDropdownCircle } from "react-icons/io";
 

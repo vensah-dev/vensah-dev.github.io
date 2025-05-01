@@ -30,8 +30,17 @@ export default function Testimonials() {
 
     return (
         <>
-            <div className='pt-[136px]'>
-                
+            <div>
+                <div className='relative w-screen -z-50 bg-primary aspect-[1728/736]'>
+                    <Image
+                        src={"/images/achievements/background.png"}
+                        fill
+                        // quality={100}
+                        className='object-cover'
+                        alt={"bg"}
+                    />
+                </div>
+
             </div>
         </>
     )
