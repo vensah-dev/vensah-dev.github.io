@@ -66,10 +66,10 @@ export function Navbar({ className, style }) {
     //   title: "Competencies",
     //   url: "/competencies",
     // },
-    {
-      title: "Achievements",
-      url: "/achievements",
-    },
+    // {
+    //   title: "Achievements",
+    //   url: "/achievements",
+    // },
     // {
     //   title: "Blogs",
     //   url: "/achievements",
