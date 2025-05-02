@@ -20,7 +20,7 @@ const Footer = () => {
   }
   return (
     <footer className='bg-secondary '>
-      <div className="flex mx-16 py-6 items-center justify-between">
+      <div className="flex md:mx-16 mx-4 py-6 items-center justify-between">
 
         <button onClick={scrollToTop}>
 
@@ -32,7 +32,7 @@ const Footer = () => {
               />
             </div>
 
-            <span className='text-white75'>© <p className={`md:inline hidden`}>Designed and Developed by</p> Venkatesh Devendran 2025.</span>
+            <span className='text-white75 md:text-base text-sm'>© <p className={`md:inline hidden`}>Designed and Developed by</p> Venkatesh Devendran 2025.</span>
           </div>
 
         </button>
