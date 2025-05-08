@@ -22,7 +22,7 @@ import { projects } from '../../lib/projects';
 import ProjectsContent from '@/components/projects-content';
 
 export const metadata = {
-    title: "Achievements"
+    title: "Timetable"
 };
 
 export default function timetable() {
