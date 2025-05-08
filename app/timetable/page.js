@@ -25,15 +25,25 @@ export const metadata = {
     title: "Achievements"
 };
 
-export default function Achievements() {
+export default function timetable() {
 
 
     return (
         <>
-            <div>
-                <div className='relative w-screen -z-50 bg-primary aspect-[1728/736]'>
+            <div className='relative flex-col pt-[136px]'>
+                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040] mb-4'>
                     <Image
-                        src={"/images/achievements/background.png"}
+                        src={"/images/timetable/even.png"}
+                        fill
+                        // quality={100}
+                        className='object-cover'
+                        alt={"bg"}
+                    />
+                </div>
+
+                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040]'>
+                    <Image
+                        src={"/images/timetable/even.png"}
                         fill
                         // quality={100}
                         className='object-cover'
