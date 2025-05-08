@@ -31,7 +31,7 @@ export default function timetable() {
     return (
         <>
             <div className='relative flex-col pt-[136px]'>
-                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040] mb-4'>
+                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040] m-4'>
                     <Image
                         src={"/images/timetable/even.png"}
                         fill
@@ -41,7 +41,7 @@ export default function timetable() {
                     />
                 </div>
 
-                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040]'>
+                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040] m-4'>
                     <Image
                         src={"/images/timetable/odd.png"}
                         fill
