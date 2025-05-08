@@ -43,7 +43,7 @@ export default function timetable() {
 
                 <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040]'>
                     <Image
-                        src={"/images/timetable/even.png"}
+                        src={"/images/timetable/odd.png"}
                         fill
                         // quality={100}
                         className='object-cover'
