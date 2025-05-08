@@ -30,27 +30,25 @@ export default function timetable() {
 
     return (
         <>
-            <div className='relative flex-col pt-[136px] p-4'>
-                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040] mb-4'>
+            <div className='flex-col items-center justify-center pt-[200px] p-32'>
+                <div className='relative h-[90vh] bg-primary mb-8'>
                     <Image
                         src={"/images/timetable/even.png"}
                         fill
                         // quality={100}
-                        className='object-cover'
-                        alt={"bg"}
+                        className='object-contain self-center'
+                        alt={"even"}
                     />
                 </div>
-
-                <div className='relative w-screen -z-50 bg-primary aspect-[2646/2040]'>
+                <div className='relative h-[90vh] bg-primary'>
                     <Image
                         src={"/images/timetable/odd.png"}
                         fill
                         // quality={100}
-                        className='object-cover'
-                        alt={"bg"}
+                        className='object-contain'
+                        alt={"odd"}
                     />
                 </div>
-
             </div>
         </>
     )
