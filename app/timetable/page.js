@@ -10,17 +10,6 @@ import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
 
-
-//components
-import { SecondaryButton } from '@/components/secondary-button'
-
-import FeaturedProject from '@/components/featured-project';
-import ProjectThumbnail from '@/components/project-thumbnail';
-
-//Data
-import { projects } from '../../lib/projects';
-import ProjectsContent from '@/components/projects-content';
-
 export const metadata = {
     title: "Timetable"
 };
@@ -30,8 +19,8 @@ export default function timetable() {
 
     return (
         <>
-            <div className='flex-col items-center justify-center pt-[200px] p-32'>
-                <div className='relative h-[90vh] bg-primary mb-8'>
+            <div className='flex-col items-center justify-center pt-[200px] lg:p-32 p-4'>
+                <div className='relative h-[90vh] bg-primary lg:mb-8 mb-4'>
                     <Image
                         src={"/images/timetable/even.png"}
                         fill
