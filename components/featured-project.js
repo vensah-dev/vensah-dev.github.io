@@ -59,7 +59,7 @@ export default function FeaturedProject({ project }) {
             </div>
 
             {/* featured project description */}
-            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 bg-secondary backdrop-blur-3xl top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
+            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 xl:backdrop-blur-3xl bg-secondary top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
 
                 <div className={`flex-col ${width < 1490 && width > 1024 ? "pt-[136px]" : "pt-0"}`}>
 
@@ -81,7 +81,7 @@ export default function FeaturedProject({ project }) {
                         <Tags project={project} />
                     </div>
 
-                    <PrimaryButton text={"View"} className='xl:pt-10 pt-6' handleClick={() => router.push(`/projects/${project.kat}`)} />
+                    <PrimaryButton text={"View"} className='xl:pt-10 pt-10' handleClick={() => router.push(`/projects/${project.kat}`)} />
                 </div>
 
             </div>
