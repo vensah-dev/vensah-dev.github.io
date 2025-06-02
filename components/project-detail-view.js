@@ -63,13 +63,13 @@ export function ProjectsDetailView({ project }) {
             </div>
 
             {/* icons */}
-            <div className='flex lg:flex-row flex-col lg:justify-between items-center lg:gap-0 gap-12 lg:py-12 py-6 bg-secondary lg:px-32 md:px-16 px-4'>
+            <div className='flex lg:flex-row flex-col lg:justify-between items-center lg:gap-0 gap-12 lg:py-12 py-8 bg-secondary lg:px-32 md:px-16 px-4'>
                 <div className='flex w-full justify-center lg:gap-16 gap-10'>
                     {
 
                         project.links && project.links.length > 0 ? (
                             project.links.map((link, index) => (
-                                <a href={link.url} key={index} className='block text-accent lg:w-16 lg:h-16 h-10'>{link.content}</a>
+                                <a href={link.url} key={index} className='block text-accent lg:w-16 lg:h-16 h-12'>{link.content}</a>
                             ))
                         ) : null
 
