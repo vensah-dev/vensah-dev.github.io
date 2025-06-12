@@ -19,12 +19,12 @@ export function ProjectsDetailView({ project }) {
 
     const projectHighlights = []
 
-    for (let _ in project.highlights) {
+    for (let _ = 0; _ < project.highlights; _++) {
         projectHighlights.push({ image: "" })
     }
 
-    for (let i = 0; i < project.highlights.length; i++) {
-        const imageName = project.highlights[i].image;
+    for (let i = 0; i < project.highlights; i++) {
+        const imageName = `highlight-${i+1}.png`;
 
         var imagePath = '';
 
