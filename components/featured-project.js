@@ -59,7 +59,7 @@ export default function FeaturedProject({ project }) {
             </div>
 
             {/* featured project description */}
-            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 xl:backdrop-blur-3xl bg-secondary top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
+            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 xl:backdrop-blur-xl bg-secondary top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
 
                 <div className={`flex-col ${width < 1490 && width > 1024 ? "pt-[136px]" : "pt-0"}`}>
 
