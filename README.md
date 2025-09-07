@@ -19,5 +19,5 @@ Possibly make a page just for the testimonials, would be too specific toward DSA
 ## Competencies Page
 The aim is to have a skill tree or something similar, a visual and interactive way of exploring my skills and values
 
-## Achievements Page ➖
+## Achievements Page 
 Super similar to the Projects Page but for all of my awards and certificates, so idk for sure if I will make this page.
