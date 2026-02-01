@@ -29,10 +29,10 @@ export function ProjectsDetailView({ project }) {
         var imagePath = '';
 
         if (lessThanMd && project.mobileHighlights) {
-            imagePath = `/images/projects/${project.kat}/mobile-highlights/${imageName}`;
+            imagePath = `/images/projects/${project.key}/mobile-highlights/${imageName}`;
         }
         else {
-            imagePath = `/images/projects/${project.kat}/highlights/${imageName}`;
+            imagePath = `/images/projects/${project.key}/highlights/${imageName}`;
         }
 
         projectHighlights[i].image = imagePath;
@@ -48,17 +48,17 @@ export function ProjectsDetailView({ project }) {
             {/* full poster */}
             <div className='' >
                 <div className='w-screen md:h-[136px] h-[104px]' style={{ background: `linear-gradient(180deg, rgba(7, 9, 7, 0.5) 0%, rgba(7, 9, 7, 0.0) 100%), ${project.navbarColor}` }} />
-                <div className='relative w-full -z-50 bg-primary md:aspect-[1728/800] aspect-[600/200]' style={{ backgroundColor: project.navbarColor || "#070907" }}>
+                <div className='relative w-full md:h-[calc(100vh-136px)] h-[calc(100vh-104px)] -z-50 bg-primary items-center justify-center' style={{ backgroundColor: project.navbarColor || "#070907" }}>
 
                     <Image
-                        src={lessThanMd ? project.logo : project.fullPoster}
+                        src={lessThanMd ? project.mobilePoster == "" ? project.logo : project.mobilePoster : project.fullPoster}
                         fill
                         // quality={100}
-                        className='md:px-0 px-4 object-scale-down object-top'
-                        alt={lessThanMd ? project.title + "-logo" : project.title + "-full-poster"}
+                        className={`md:px-0 ${lessThanMd && project.mobilePoster == "" ? "px-4 pb-[104px]" : "px-0"} px-4 object-scale-down`}
+                        alt={lessThanMd && project.mobilePoster == "" ? project.title + "-logo" : project.title + "-poster"}
                     />
                 </div>
-                <div className='md:hidden block w-screen md:h-[68px] h-[52px]' style={{ backgroundColor: project.navbarColor || "#070907" }} />
+                {/* <div className='md:hidden block w-screen md:h-[68px] h-[52px]' style={{ backgroundColor: project.navbarColor || "#070907" }} /> */}
                 {/* <div className='w-screen h-[15vw]' style={{ background: `linear-gradient(to bottom, ${project.navbarColor === null ? "#070907" : project.navbarColor}, ${"#070907"})` }}/> */}
             </div>
 

@@ -14,7 +14,7 @@ import Tags from '@/components/project-tag';
 export default function ProjectThumbnail({ project }) {
     return (
             <div className='flex-col bg-secondary rounded-[1rem] overflow-clip p-2 group-active:brightness-125  transition-all duration-350'>
-                <Link href={`/projects/${project.kat}`} className='group w-full lg:hover:opacity-70 active:opacity-100' onClick={() => { console.log(image) }}>
+                <Link href={`/projects/${project.key}`} className='group w-full lg:hover:opacity-70 active:opacity-100' onClick={() => { console.log(image) }}>
                     <div className='opacity-80 relative w-[(100vw-128px)/3] rounded-[0.5rem] overflow-clip  group-active:opacity-70 lg:group-active:brightness-75 transition-all duration-350' style={{ aspectRatio: "540 / 300" }}>
                         <Image
                             src={project.image}

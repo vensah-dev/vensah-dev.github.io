@@ -16,7 +16,6 @@ import Tags from '@/components/project-tag';
 
 export default function FeaturedProject({ project }) {
     const router = useRouter()
-
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
@@ -36,7 +35,7 @@ export default function FeaturedProject({ project }) {
     }, []);
 
     return (
-        <div className=' w-screen'>
+        <div className='w-screen'>
 
             {/* featured project image */}
             <div className={` h-[136px] w-full xl:hidden`} style={{ backgroundColor: project.navbarColor }} />
@@ -58,10 +57,13 @@ export default function FeaturedProject({ project }) {
                 />
             </div>
 
-            {/* featured project description */}
-            <div className={`xl:w-[50vw] w-full xl:bg-primary xl:bg-opacity-50 xl:backdrop-blur-xl bg-secondary top-0 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[864/832] aspect-auto xl:py-0 py-8`}>
+            {/* <div className={` w-full bg-opacity-0 bg-gradient-to-t from-primary from-0% to-white-opacity-0 to-25% lg:aspect-[1728/832] absolute`}/>
+            <div className={` w-full bg-opacity-0 bg-gradient-to-r from-primary from-0% to-white-opacity-0 to-85% lg:aspect-[1728/832] absolute`}/> */}
 
-                <div className={`flex-col ${width < 1490 && width > 1024 ? "pt-[136px]" : "pt-0"}`}>
+            {/* featured project description */}
+            <div className={`xl:w-[25vw] w-full xl:bg-transparent bg-secondary top-1 flex ${width < 1490 ? "" : "xl:items-center"} md:px-16 px-4 xl:aspect-[432/832] aspect-auto xl:py-0 py-8`}>
+
+                <div className={` flex-col ${width < 1490 && width > 1024 ? "pt-[136px]" : "pt-0"}`}>
 
                     <div className='lg:flex-col md:flex flex-col xl:gap-10 gap-4'>
                         <div className='lg:block relative lg:w-[30vw] md:w-[60vw] w-[80vw]' style={{ aspectRatio: "3 / 1" }}>
@@ -73,15 +75,15 @@ export default function FeaturedProject({ project }) {
                                 alt={project.title + "-logo"}
                             />
                         </div>
-                        <p className='xl:text-base lg:text-sm text-base text-white75 font-light w-full pb-4'>{project.description}</p>
 
+                        <p className='xl:text-base relative lg:text-sm text-base text-white75 font-light w-full pb-4'>{project.description}</p>
                     </div>
 
-                    <div className='flex overflow-scroll w-full no-scrollbar gap-3'>
+                    <div className='flex overflow-scroll w-full no-scrollbar gap-3 relative'>
                         <Tags project={project} />
                     </div>
 
-                    <PrimaryButton text={"View"} className='xl:pt-10 pt-10' handleClick={() => router.push(`/projects/${project.kat}`)} />
+                    <PrimaryButton text={"View"} className='xl:pt-10 pt-10' handleClick={() => router.push(`/projects/${project.key}`)} />
                 </div>
 
             </div>

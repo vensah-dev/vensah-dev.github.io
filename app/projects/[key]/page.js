@@ -11,17 +11,17 @@ import Head from 'next/head';
 export const generateStaticParams = async () => {
 
     const paths = [
-        { kat: "all" },
+        { key: "all" },
         ...projects
     ]
 
     return paths.map((p) => ({
-        kat: p.kat
+        key: p.key
     }))
 };
 
 export async function generateMetadata({ params }) {
-    const project = projects.find((p) => p.kat === params.kat)
+    const project = projects.find((p) => p.key === params.key)
 
     return {
         title: `${project ? `${project.title} | Projects ` : "All Projects"}`,
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: project ? `${project.title} | Projects | Venkatesh` : "All Projects | Projects | Venkatesh",
             description: project ? project.description.replace(/[\n\r\t]/gm, "") : "Check out all the projects I was involved in over the years!",
-            url: "https://vensah-dev.github.io/projects/" + params.kat,
+            url: "https://vensah-dev.github.io/projects/" + params.key,
             type: "website",
             logo: 'https://vensah-dev.github.io/icons/open-graph-image.png',
             images: [
@@ -57,12 +57,12 @@ export async function generateMetadata({ params }) {
 
 export default function ProjectsDetailPage({ params }) {
 
-    const project = projects.find((p) => p.kat === params.kat)
+    const project = projects.find((p) => p.key === params.key)
 
     return (
         <>
             {
-                params.kat === "all" ? (
+                params.key === "all" ? (
                     <div className='py-[136px]'>
                         <AllProjects />
                     </div>
