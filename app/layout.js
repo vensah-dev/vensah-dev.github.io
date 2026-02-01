@@ -8,7 +8,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const Ubuntu_init = Ubuntu_Sans({
-  subsets: ["latin"],
+  subsets: ["latin"],  
   variable: "--font-ubuntu-sans",
 });
 
