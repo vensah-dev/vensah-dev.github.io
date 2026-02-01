@@ -13,7 +13,7 @@ This will be the landing page for now and the aim is to let vistors get a crash 
 ## Projects Page ✅
 The aim is to have a full archive of all my projects, however most of them will have to be accessed by searching. My latest and greatest projects will be featured in depth in this page and some possibly in the about page
 
-## Testimonials Page
+## Testimonials Page ➖
 Possibly make a page just for the testimonials, would be too specific toward DSA, not confirmed just an idea.
 
 ## Competencies Page
