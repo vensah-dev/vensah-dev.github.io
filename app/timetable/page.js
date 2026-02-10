@@ -22,14 +22,14 @@ export default function timetable() {
             <div className='flex-col items-center justify-center pt-[200px] lg:p-32 p-4'>
                 <div className='relative h-[90vh] bg-primary lg:mb-8 mb-4'>
                     <Image
-                        src={"/images/timetable/even.png"}
+                        src={"/images/timetable/main.jpg"}
                         fill
                         // quality={100}
                         className='object-contain self-center'
-                        alt={"even"}
+                        alt={"main timetable"}
                     />
                 </div>
-                <div className='relative h-[90vh] bg-primary'>
+                {/* <div className='relative h-[90vh] bg-primary'>
                     <Image
                         src={"/images/timetable/odd.png"}
                         fill
@@ -37,7 +37,7 @@ export default function timetable() {
                         className='object-contain'
                         alt={"odd"}
                     />
-                </div>
+                </div> */}
             </div>
         </>
     )
