@@ -22,7 +22,7 @@ export default function timetable() {
             <div className='flex-col items-center justify-center pt-[200px] lg:p-32 p-4'>
                 <div className='relative h-[90vh] w-full bg-primary lg:mb-8 mb-4'>
                     <Image
-                        src={"/images/timetable/even.jpg"}
+                        src={"/images/timetable/even.png"}
                         fill
                         // quality={100}
                         className='object-contain self-center'
