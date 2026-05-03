@@ -80,7 +80,7 @@ export function AboutHero() {
           />
 
           <TextGenerateEffect
-            words={"I’m Venkatesh Devendran. A student in Pei Hwa Secondary School, a passionate developer and the president of my Robotics Club"}
+            words={"I’m Venkatesh Devendran. A student in River Valley High School, a passionate developer and a leader."}
             className={" w-full md:w-3/5 lg:w-1/3 pb-4 animate-blurfadein"}
             color={"white75"}
             duration={1}

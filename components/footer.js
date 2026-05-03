@@ -32,7 +32,7 @@ const Footer = () => {
               />
             </div>
 
-            <span className='text-white75 md:text-base text-sm'>© <p className={`md:inline hidden`}>Designed and Developed by</p> Venkatesh Devendran 2025.</span>
+            <span className='text-white75 md:text-base text-sm'>© <p className={`md:inline hidden`}>Designed and Developed by</p> Venkatesh Devendran 2026.</span>
           </div>
 
         </button>
