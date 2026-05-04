@@ -151,48 +151,14 @@ export default function Home() {
   const data = [
 
     {
-      title: "2018",
-      content: (
-        <CardCarouselContent
-          position={"right"}
-          content={year2018}
-        />
-      ),
-    },
-
-
-    {
-      title: "2020",
+      title: "2024",
       content: (
         <CardCarouselContent
           position={"left"}
-          content={year2020}
+          content={year2024}
         />
       ),
     },
-
-
-    {
-      title: "2021",
-      content: (
-        <CardCarouselContent
-          position={"right"}
-          content={year2021}
-        />
-      ),
-    },
-
-
-    {
-      title: "2022",
-      content: (
-        <CardCarouselContent
-          position={"left"}
-          content={year2022}
-        />
-      ),
-    },
-
 
     {
       title: "2023",
@@ -204,13 +170,42 @@ export default function Home() {
       ),
     },
 
-
     {
-      title: "2024",
+      title: "2022",
       content: (
         <CardCarouselContent
           position={"left"}
-          content={year2024}
+          content={year2022}
+        />
+      ),
+    },
+
+    {
+      title: "2021",
+      content: (
+        <CardCarouselContent
+          position={"right"}
+          content={year2021}
+        />
+      ),
+    },
+
+    {
+      title: "2020",
+      content: (
+        <CardCarouselContent
+          position={"left"}
+          content={year2020}
+        />
+      ),
+    },
+
+    {
+      title: "2018",
+      content: (
+        <CardCarouselContent
+          position={"right"}
+          content={year2018}
         />
       ),
     },
