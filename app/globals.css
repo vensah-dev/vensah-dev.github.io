@@ -8,8 +8,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
+  /* --font-display: var(--font-afacad-flux); */
+  --font-display: var(--font-six-caps);
+
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,9 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Geist_Mono, Afacad_Flux, Roboto_Flex, Six_Caps } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const robotoFlex = Roboto_Flex({
+  variable: "--font-roboto-flex",
+  subsets: ["latin"],
+  weight: "variable",
+  axes: ["wdth", "YTUC", "XTRA"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+});
+
+const sixCaps = Six_Caps({
+  variable: "--font-six-caps",
+  subsets: ["latin"],
+  weight: "400"
+});
+
+const afacadFlux = Afacad_Flux({
+  variable: "--font-afacad-flux",
   subsets: ["latin"],
 });
 
@@ -25,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${outfit.variable} ${geistMono.variable} ${afacadFlux.variable} ${sixCaps.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
