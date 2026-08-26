@@ -57,7 +57,7 @@ export function AboutHero() {
               duration={1}
             />
             <TextGenerateEffect
-              words={'“Hello, I’m Venkatesh”'}
+              words={'Hi, I’m Venkatesh”'}
               className="text-[#79A978]"
               color={"[#79A978]"}
 
